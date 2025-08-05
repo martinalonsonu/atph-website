@@ -1,3 +1,10 @@
+export const HEADER_NAV_INFORMATION = [
+    { title: "Nosotros", link: "/about" },
+    { title: "Servicios", link: "/services" },
+    { title: "Blog", link: "/blog" },
+    { title: "Contacto", link: "/contact" },
+]
+
 
 export const HERO_INFORMATION = [
     {

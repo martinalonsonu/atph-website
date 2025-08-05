@@ -8,19 +8,6 @@
     box-sizing: border-box;
 }
 
-/* HTML5 display-role reset for older browsers */
-article,
-aside,
-figcaption,
-figure,
-footer,
-header,
-menu,
-nav,
-section {
-    display: block;
-}
-
 /* globals.css */
 .font-cinzel {
   font-family: var(--font-cinzel-decorative), serif;
@@ -47,7 +34,7 @@ a {
 }
 
 a:hover {
-    text-decoration: underline;
+    text-decoration: none;
 }
 
 button {
@@ -63,3 +50,16 @@ address {
 .react-share__ShareButton {
     display: flex;
 }
+
+
+/* body {
+    width: 100%;
+    background-image: url('/assets/bg-homepage.jpg');
+    min-height: 100vh;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    margin: 0;
+    padding: 0;
+} */
