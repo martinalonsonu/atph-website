@@ -26,22 +26,12 @@ const AboutSection = () => {
             </button>
           </div>
           <div className="lg:max-w-[50%] w-full">
-            {/* Imagen para mobile */}
-            <Image
-              src="/assets/about-mobile.jpg"
-              alt="A Tus Pies Humilde"
-              width={500}
-              height={500}
-              className="w-full h-[300px] object-cover rounded-br-4xl rounded-tl-4xl lg:hidden"
-              loading="lazy"
-            />
-            {/* Imagen para desktop */}
             <Image
               src="/assets/about-desktop.jpg"
               alt="A Tus Pies Humilde"
               width={500}
-              height={500}
-              className="w-full h-[600px] object-cover rounded-br-4xl rounded-tl-4xl hidden lg:block"
+              height={600}
+              className="w-full h-[300px] lg:h-[600px] object-cover rounded-br-4xl rounded-tl-4xl"
               loading="lazy"
             />
           </div>
