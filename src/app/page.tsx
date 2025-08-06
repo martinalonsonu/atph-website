@@ -1,3 +1,4 @@
+import AboutSection from "@/components/aboutSection";
 import HeaderNav from "@/components/headerNav";
 import HeroSection from "@/components/heroSection";
 import ServicesSection from "@/components/servicesSection";
@@ -9,6 +10,7 @@ export default function Home() {
       <main className="w-full">
         <HeroSection />
         <ServicesSection />
+        <AboutSection />
       </main>
     </div>
   );
