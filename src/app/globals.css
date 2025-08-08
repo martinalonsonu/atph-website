@@ -45,6 +45,15 @@ address {
   display: flex;
 }
 
+:root {
+  --color-primary: #8b0000;
+  --color-secondary: #cca21c;
+}
+
+.text-primary {
+  color: var(--color-primary);
+}
+
 /* body {
     width: 100%;
     background-image: url('/assets/bg-homepage.jpg');

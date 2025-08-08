@@ -8,7 +8,7 @@ import Image from "next/image";
 const HeroSection = () => {
   const { currentItem } = useScroller(HERO_INFORMATION);
   return (
-    <section className="w-full h-auto lg:h-[720px] flex flex-col lg:flex-row bg-[#f5faff]">
+    <section className="w-full h-auto lg:h-[720px] flex flex-col lg:flex-row bg-[#fff8f5]">
       <div className="lg:w-[33%] h-full">
         <Image
           src={currentItem.image}
@@ -31,7 +31,7 @@ const HeroSection = () => {
         <div className="w-full h-full flex flex-col px-4 py-6 sm:py-14 sm:pl-24 justify-center gap-8 relative overflow-hidden">
           <h1 className="text-3xl sm:text-[78px] sm:leading-[60px] z-10 text-[#cca21c] font-cinzel">
             A TUS PIES <br />
-            <span className="text-4xl sm:text-[86px] text-[#54290c] font-bold">
+            <span className="text-4xl sm:text-[86px] text-[#8b0000] font-bold">
               HUMILDE
             </span>
           </h1>

@@ -24,7 +24,7 @@ const HeaderNav = () => {
                 <li key={index}>
                   <a
                     href={item.link}
-                    className="text-[#54290c] hover:text-[#cca21c] font-work font-bold"
+                    className="text-[#8b0000] hover:text-[#cca21c] font-work font-bold"
                   >
                     {item.title}
                   </a>

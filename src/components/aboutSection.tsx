@@ -3,6 +3,7 @@ import React from "react";
 import Link from "next/link";
 import Wrapper from "./wrapper";
 import Image from "next/image";
+import { ABOUT_MODEL } from "@/utils/models";
 const AboutSection = () => {
   return (
     <section className="w-full bg-[#fff8f5] relative py-6 lg:py-20">
@@ -10,25 +11,22 @@ const AboutSection = () => {
         <div className="w-full gap-5 relative flex flex-col items-center lg:flex-row px-4 lg:px-0">
           <div className="lg:max-w-[50%] w-full gap-2.5 xl:ml-24 flex flex-col lg:gap-5 items-start">
             <p className="font-work text-base sm:text-xl font-bold text-[#cca21c]">
-              NUESTRA HISTORIA
+              {ABOUT_MODEL.tooltip}
             </p>
-            <h3 className="font-cinzel text-2xl sm:text-4xl lg:text-6xl font-bold text-[#54290c]">
-              ACERCA DE NOSOTROS
+            <h3 className="font-cinzel text-2xl sm:text-4xl lg:text-6xl font-bold text-[#8b0000]">
+              {ABOUT_MODEL.title}
             </h3>
             <p className="w-full text-[15px] max-w-[500px] sm:text-2xl font-mulish">
-              Nuestra historia inicia en el corazón amoroso del Señor de
-              Humildad y Paciencia. Inspirados por esta devoción, surgió la idea
-              de crear <b>A Tus Pies Humilde</b>, con la misión de compartir
-              esta devoción con el mundo...
+              {ABOUT_MODEL.description}
             </p>
-            <button className="bg-[#54290c] text-white px-6 py-3 text-base">
-              <Link href="/about">Seguir leyendo</Link>
+            <button className="bg-[#8b0000] text-white px-6 py-3 text-base">
+              <Link href={ABOUT_MODEL.redirectLink}>Seguir leyendo</Link>
             </button>
           </div>
           <div className="lg:max-w-[50%] w-full">
             <Image
-              src="/assets/about-desktop.jpg"
-              alt="A Tus Pies Humilde"
+              src={ABOUT_MODEL.image}
+              alt={ABOUT_MODEL.alt}
               width={500}
               height={600}
               className="w-full h-[300px] lg:h-[600px] object-cover rounded-br-4xl rounded-tl-4xl"
