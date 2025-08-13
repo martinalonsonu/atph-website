@@ -2,14 +2,15 @@ import type { NextApiRequest, NextApiResponse } from "next";
 import { fetchAPI } from "@/lib/fetcher";
 import { Post } from "@/lib/interface";
 
-export default async function handler(
-  req: NextApiRequest,
-  res: NextApiResponse
-) {
-  const { slug } = req.query;
+export async function GET(request: Request) {
+  const { searchParams } = new URL(request.url);
+  const slug = searchParams.get("slug");
 
   if (!slug || typeof slug !== "string") {
-    return res.status(400).json({ error: "Slug requerido" });
+    return new Response(JSON.stringify({ error: "Slug requerido" }), {
+      status: 400,
+      headers: { "Content-Type": "application/json" },
+    });
   }
 
   try {
@@ -20,11 +21,20 @@ export default async function handler(
     });
 
     if (!posts.length) {
-      return res.status(404).json({ error: "Post no encontrado" });
+      return new Response(JSON.stringify({ error: "Post no encontrado" }), {
+        status: 404,
+        headers: { "Content-Type": "application/json" },
+      });
     }
 
-    res.status(200).json(posts[0]);
+    return new Response(JSON.stringify(posts[0]), {
+      status: 200,
+      headers: { "Content-Type": "application/json" },
+    });
   } catch (error) {
-    res.status(500).json({ error: (error as Error).message });
+    return new Response(JSON.stringify({ error: (error as Error).message }), {
+      status: 500,
+      headers: { "Content-Type": "application/json" },
+    });
   }
 }
