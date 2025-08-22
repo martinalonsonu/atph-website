@@ -1,22 +1,42 @@
-import React from "react";
+"use client";
+
+import React, { useEffect } from "react";
 import Wrapper from "./wrapper";
 import { HEADER_NAV_INFORMATION } from "@/utils/models";
 import Image from "next/image";
 import Link from "next/link";
 
 const HeaderNav = () => {
+  const [isScrolled, setIsScrolled] = React.useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => setIsScrolled(window.scrollY > 100);
+    window.addEventListener("scroll", handleScroll);
+
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
-    <header className="bg-white">
+    <header
+      className={`bg-white sticky top-0 z-50 transition-shadow duration-300 ${
+        isScrolled ? "shadow-md" : ""
+      }`}
+    >
       <Wrapper>
-        <nav className="flex h-20 items-center">
+        <nav
+          className={`flex items-center transition-all duration-300 ease-in-out ${
+            isScrolled ? "h-20" : "h-[70px]"
+          }`}
+        >
           <div className="w-full flex justify-between items-center space-x-4">
             <Link href="/" className="text-lg font-bold">
               <Image
                 src="/assets/logo-atph.png"
                 alt="Logo"
-                width={70}
-                height={70}
+                width={isScrolled ? 70 : 60}
+                height={isScrolled ? 70 : 60}
                 priority
+                className="transition-all duration-300 ease-in-out"
               />
             </Link>
             <ul className="space-x-6 hidden lg:flex">

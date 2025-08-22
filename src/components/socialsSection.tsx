@@ -6,7 +6,7 @@ import Image from "next/image";
 import { ABOUT_MODEL } from "@/utils/models";
 const SocialsSection = () => {
   return (
-    <section className="w-full bg-[#fefefe] relative py-6 lg:py-20">
+    <section className="w-full bg-[#fff8f5] relative py-6 lg:py-20">
       <Wrapper>
         <div className="w-full relative flex flex-col-reverse items-center gap-5 lg:flex-row px-4 lg:px-0">
           <iframe

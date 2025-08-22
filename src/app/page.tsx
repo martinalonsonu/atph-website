@@ -12,10 +12,10 @@ export default function Home() {
       <HeaderNav />
       <main className="w-full">
         <HeroSection />
+        <AboutSection />
         <ServicesSection />
         <BlogSection />
         <SocialsSection />
-        <AboutSection />
       </main>
       <Footer />
     </div>

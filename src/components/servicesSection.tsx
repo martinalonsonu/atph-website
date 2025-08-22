@@ -5,7 +5,7 @@ import { SERVICES_MODEL } from "@/utils/models";
 
 const ServicesSection = () => {
   return (
-    <section className="w-full bg-[#fefefe] relative">
+    <section className="w-full bg-[#fff8f5] relative">
       <div className="w-full sm:gap-10 sm:max-w-[1000px] xl:max-w-[1200px] flex flex-col xl:gap-0 lg:flex-row mx-auto justify-center items-center py-6 px-4 lg:px-0 lg:py-20">
         <div className="w-full flex flex-col items-center lg:w-[50%] relative">
           <div className="w-full mb-9 xl:ml-24">
