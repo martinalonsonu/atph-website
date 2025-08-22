@@ -1,23 +1,13 @@
-import AboutSection from "@/components/aboutSection";
-import Footer from "@/components/footer";
-import HeaderNav from "@/components/headerNav";
-import HeroSection from "@/components/heroSection";
-import BlogSection from "@/components/blogSection";
-import ServicesSection from "@/components/servicesSection";
-import SocialsSection from "@/components/socialsSection";
+import Home from "@/features/home";
+import { Metadata } from "next";
+import React from "react";
+export const metadata: Metadata = {
+  title: "A Tus Pies Humilde | Inicio",
+  description:
+    "Portal religioso católico y devocional | Transmisiones en vivo | Alfombras de Aserrín y Viruta teñida",
+};
+const Index = () => {
+  return <Home />;
+};
 
-export default function Home() {
-  return (
-    <div className="w-full flex flex-col">
-      <HeaderNav />
-      <main className="w-full">
-        <HeroSection />
-        <AboutSection />
-        <ServicesSection />
-        <BlogSection />
-        <SocialsSection />
-      </main>
-      <Footer />
-    </div>
-  );
-}
+export default Index;

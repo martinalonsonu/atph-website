@@ -1,7 +1,7 @@
 import React from "react";
 
 import Link from "next/link";
-import Wrapper from "./wrapper";
+import Wrapper from "@/features/shared/wrapper";
 import Image from "next/image";
 import { ABOUT_MODEL } from "@/utils/models";
 const AboutSection = () => {

@@ -1,5 +1,5 @@
 import React from "react";
-import CardService from "./cardService";
+import CardService from "../components/ServiceCard";
 
 import { SERVICES_MODEL } from "@/utils/models";
 

@@ -1,7 +1,7 @@
 import React from "react";
 
 import Link from "next/link";
-import Wrapper from "./wrapper";
+import Wrapper from "../../shared/wrapper";
 import Image from "next/image";
 import { ABOUT_MODEL } from "@/utils/models";
 const SocialsSection = () => {
@@ -31,7 +31,7 @@ const SocialsSection = () => {
             </p>
             <button className="bg-[#8b0000] text-white px-6 py-3 text-base">
               <Link href="https://www.facebook.com/ATusPiesHumilde">
-                VER MÁS
+                Ver más
               </Link>
             </button>
           </div>
