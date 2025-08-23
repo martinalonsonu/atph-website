@@ -3,6 +3,7 @@ import { stripHtml } from "@/utils/helpers";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+import Title from "../title";
 
 const BlogCardPrincipal = ({ mainPost }: { mainPost: Post }) => {
   return (
@@ -29,9 +30,7 @@ const BlogCardPrincipal = ({ mainPost }: { mainPost: Post }) => {
             Inspiration
           </span>
         </div>
-        <h2 className="font-cinzel text-2xl font-bold text-[#8b0000] hover:underline">
-          {stripHtml(mainPost.title.rendered)}
-        </h2>
+        <Title type="tertiary" title={stripHtml(mainPost.title.rendered)} />
         <p className="text-gray-700 text-base line-clamp-4">
           {stripHtml(mainPost.excerpt.rendered)}
         </p>

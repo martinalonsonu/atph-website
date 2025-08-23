@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useEffect } from "react";
-import Wrapper from "./wrapper";
+import Wrapper from "../layout/wrapper";
 import { HEADER_NAV_INFORMATION } from "@/utils/models";
 import Image from "next/image";
 import Link from "next/link";
@@ -10,7 +10,7 @@ const HeaderNav = () => {
   const [isScrolled, setIsScrolled] = React.useState(false);
 
   useEffect(() => {
-    const handleScroll = () => setIsScrolled(window.scrollY > 100);
+    const handleScroll = () => setIsScrolled(window.scrollY > 80);
     window.addEventListener("scroll", handleScroll);
 
     return () => window.removeEventListener("scroll", handleScroll);
@@ -25,7 +25,7 @@ const HeaderNav = () => {
       <Wrapper>
         <nav
           className={`flex items-center transition-all duration-300 ease-in-out ${
-            isScrolled ? "h-20" : "h-[70px]"
+            isScrolled ? "h-20" : "h-[60px]"
           }`}
         >
           <div className="w-full flex justify-between items-center space-x-4">
@@ -33,8 +33,8 @@ const HeaderNav = () => {
               <Image
                 src="/assets/logo-atph.png"
                 alt="Logo"
-                width={isScrolled ? 70 : 60}
-                height={isScrolled ? 70 : 60}
+                width={isScrolled ? 70 : 50}
+                height={isScrolled ? 70 : 50}
                 priority
                 className="transition-all duration-300 ease-in-out"
               />
@@ -44,7 +44,7 @@ const HeaderNav = () => {
                 <li key={index}>
                   <a
                     href={item.link}
-                    className="text-[#8b0000] hover:text-[#cca21c] font-work font-bold"
+                    className="text-[#8b0000] hover:text-[#cca21c] font-mulish uppercase transition-all duration-200 hover:underline underline-offset-4 text-sm lg:text-base"
                   >
                     {item.title}
                   </a>

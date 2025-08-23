@@ -1,7 +1,8 @@
 import React from "react";
-import CardService from "../components/ServiceCard";
+import CardService from "../components/cards/ServiceCard";
 
 import { SERVICES_MODEL } from "@/utils/models";
+import Title from "../components/title";
 
 const ServicesSection = () => {
   return (
@@ -9,12 +10,11 @@ const ServicesSection = () => {
       <div className="w-full sm:gap-10 sm:max-w-[1000px] xl:max-w-[1200px] flex flex-col xl:gap-0 lg:flex-row mx-auto justify-center items-center py-6 px-4 lg:px-0 lg:py-20">
         <div className="w-full flex flex-col items-center lg:w-[50%] relative">
           <div className="w-full mb-9 xl:ml-24">
-            <p className="font-work text-base sm:text-xl font-bold text-[#cca21c] sm:mb-2.5">
-              {SERVICES_MODEL.tooltip}
-            </p>
-            <h3 className="font-cinzel text-2xl sm:text-4xl lg:text-6xl font-bold text-[#8b0000]">
-              {SERVICES_MODEL.title}
-            </h3>
+            <Title
+              type="primary"
+              title={SERVICES_MODEL.title}
+              subtitle={SERVICES_MODEL.title}
+            />
           </div>
           <CardService
             image={SERVICES_MODEL.coverages[0].image}

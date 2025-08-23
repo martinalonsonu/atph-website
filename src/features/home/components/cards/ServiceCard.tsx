@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import Title from "../title";
 
 interface CardServiceProps {
   image: string;
@@ -21,9 +22,7 @@ const CardService: React.FC<CardServiceProps> = (props) => {
         loading="lazy"
       />
       <div className="w-full p-5 lg:py-8 lg:px-10">
-        <p className="font-cinzel font-bold text-base lg:text-2xl text-[#8b0000]">
-          {title}
-        </p>
+        <Title type="tertiary" title={title} />
         <p className="text-[13px] lg:text-base font-mulish text-black">
           {description}
         </p>

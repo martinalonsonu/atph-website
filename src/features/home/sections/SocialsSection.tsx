@@ -1,9 +1,10 @@
 import React from "react";
 
 import Link from "next/link";
-import Wrapper from "../../shared/wrapper";
-import Image from "next/image";
-import { ABOUT_MODEL } from "@/utils/models";
+import Wrapper from "../../shared/layout/wrapper";
+import Button from "@/features/shared/components/Button";
+import Title from "../components/title";
+
 const SocialsSection = () => {
   return (
     <section className="w-full bg-[#fff8f5] relative py-6 lg:py-20">
@@ -19,21 +20,19 @@ const SocialsSection = () => {
             allowFullScreen
           ></iframe>
           <div className="lg:w-[50%] w-full gap-2.5 xl:ml-24 flex flex-col lg:gap-5 items-start">
-            <p className="font-work text-base sm:text-xl font-bold text-[#cca21c]">
-              NUESTRAS REDES
-            </p>
-            <h3 className="font-cinzel text-2xl sm:text-4xl lg:text-6xl font-bold text-[#8b0000]">
-              SÍGUENOS EN FACEBOOK
-            </h3>
+            <Title
+              type="primary"
+              title="SÍGUENOS EN FACEBOOK"
+              subtitle="NUESTRAS REDES"
+            />
             <p className="w-full text-[15px] max-w-[500px] sm:text-2xl font-mulish">
               Te invitamos a seguirnos en nuestra página de Facebook, donde
               podrás visualizar nuestros trabajo, coberturas y mucho más.
             </p>
-            <button className="bg-[#8b0000] text-white px-6 py-3 text-base">
-              <Link href="https://www.facebook.com/ATusPiesHumilde">
-                Ver más
-              </Link>
-            </button>
+            <Button
+              href="https://www.facebook.com/ATusPiesHumilde"
+              text="Ver más"
+            />
           </div>
         </div>
       </Wrapper>

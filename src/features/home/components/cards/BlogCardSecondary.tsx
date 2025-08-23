@@ -2,6 +2,7 @@ import { Post } from "@/lib/interface";
 import { stripHtml } from "@/utils/helpers";
 import Image from "next/image";
 import Link from "next/link";
+import Title from "../title";
 
 export default function BlogCardSecondary({ post }: { post: Post }) {
   return (
@@ -28,9 +29,7 @@ export default function BlogCardSecondary({ post }: { post: Post }) {
         </div>
 
         {/* Título */}
-        <h3 className="font-cinzel text-lg font-bold text-[#8b0000] hover:underline">
-          {stripHtml(post.title.rendered)}
-        </h3>
+        <Title type="tertiary" title={stripHtml(post.title.rendered)} />
 
         {/* Descripción */}
         <p className="text-sm text-gray-700 line-clamp-2">
