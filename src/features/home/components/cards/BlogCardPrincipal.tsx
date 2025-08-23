@@ -1,5 +1,10 @@
 import { Post } from "@/lib/interface";
-import { stripHtml } from "@/utils/helpers";
+import {
+  formatAuthor,
+  formatCategory,
+  formatTag,
+  stripHtml,
+} from "@/utils/helpers";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
@@ -9,7 +14,7 @@ const BlogCardPrincipal = ({ mainPost }: { mainPost: Post }) => {
   return (
     <Link
       href={`/publicaciones/${mainPost.slug}`}
-      className="bg-white rounded-2xl shadow-lg overflow-hidden flex flex-col lg:flex-row mb-10 hover:shadow-xl transition hover:scale-102"
+      className="bg-white rounded-t-2xl shadow-lg overflow-hidden flex flex-col lg:flex-row mb-10 hover:shadow-xl transition hover:scale-102"
     >
       {/* Imagen izquierda */}
       <Image
@@ -23,11 +28,18 @@ const BlogCardPrincipal = ({ mainPost }: { mainPost: Post }) => {
       {/* Contenido derecha */}
       <div className="p-6 flex flex-col gap-3 lg:w-1/2 justify-center">
         <div className="flex gap-2 text-xs">
-          <span className="bg-[#ffe6e6] text-[#8b0000] font-semibold px-2 py-0.5 rounded">
-            News
+          <Image
+            src={formatAuthor(mainPost.author).avatar}
+            width={25}
+            height={25}
+            alt={formatAuthor(mainPost.author).name}
+            className="rounded-full hover:scale-105 transition"
+          />
+          <span className="flex items-center bg-[#ffe6e6] text-[#8b0000] font-semibold px-2 py-0.5 rounded">
+            {formatCategory(mainPost.categories[0])}
           </span>
-          <span className="bg-[#f0e6ff] text-[#5a2ca0] font-semibold px-2 py-0.5 rounded">
-            Inspiration
+          <span className="flex items-center bg-[#f0e6ff] text-[#5a2ca0] font-semibold px-2 py-0.5 rounded">
+            {formatTag(mainPost.tags[0])}
           </span>
         </div>
         <Title type="tertiary" title={stripHtml(mainPost.title.rendered)} />

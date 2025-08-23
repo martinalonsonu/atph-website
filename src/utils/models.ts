@@ -37,21 +37,24 @@ export const SERVICES_MODEL = {
   tooltip: "¿QUÉ HACEMOS?",
   coverages: [
     {
-      image: "/assets/services-1.png",
+      image:
+        "https://atphdev.wordpress.com/wp-content/uploads/2025/08/services-1-1.png",
       alt: "Portada",
       title: "Coberturas Especiales",
       description:
         "Realizamos coberturas y transmisiones en vivo de eventos religiosos y culturales a través de nuestras plataformas digitales. Nos especializamos en la transmisión de misas, procesiones y celebraciones especiales, brindando una experiencia visual de alta calidad.",
     },
     {
-      image: "/assets/services-2.jpg",
+      image:
+        "https://atphdev.wordpress.com/wp-content/uploads/2025/08/services-2-1.jpg",
       alt: "Portada",
       title: "Alfombras",
       description:
         "Nos especializamos en el diseño y elaboración de alfombras artísticas utilizando aserrín y viruta teñida. Estas creaciones, llenas de color y simbolismo, son ideales para celebraciones religiosas y procesiones. Cada alfombra es realizada con dedicación y detalle, reflejando la riqueza de nuestras tradiciones.",
     },
     {
-      image: "/assets/services-3.png",
+      image:
+        "https://atphdev.wordpress.com/wp-content/uploads/2025/08/services-3-1.png",
       alt: "Portada",
       title: "Eventos Religiosos",
       description:
@@ -65,7 +68,8 @@ export const ABOUT_MODEL = {
   tooltip: "ACERCA DE NOSOTROS",
   description:
     "Nuestra historia inicia en el corazón amoroso del Señor de Humildad y Paciencia. Inspirados por esta devoción, surgió la idea de crear A Tus Pies Humilde, con la misión de compartir esta devoción con el mundo...",
-  image: "/assets/about-desktop.jpg",
+  image:
+    "https://atphdev.wordpress.com/wp-content/uploads/2025/08/about-desktop.jpg",
   alt: "A Tus Pies Humilde",
   redirectLink: "/about",
 };

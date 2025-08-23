@@ -5,7 +5,7 @@ const Button = ({ href, text }: { href: string; text: string }) => {
   return (
     <button
       type="button"
-      className="bg-[#8b0000] text-white px-6 py-3 text-base rounded-xl hover:bg-amber-800 hover:scale-103 transition-all"
+      className="bg-[#8b0000] text-white px-6 py-3 text-base rounded-xl hover:bg-amber-800 hover:scale-103 transition-all whitespace-nowrap"
     >
       <Link href={href}>{text}</Link>
     </button>
