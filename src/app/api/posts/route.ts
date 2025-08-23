@@ -8,7 +8,7 @@ export async function GET(request: Request) {
     const posts = await fetchAPI<Post[]>("/posts", {
       per_page: Number(amount) || 5,
       _fields:
-        "id,date,slug,title,content,author,jetpack_featured_media_url,categories,excerpt",
+        "id,date,slug,title,content,author,jetpack_featured_media_url,categories,excerpt,tags",
     });
     return Response.json(posts, { status: 200 });
   } catch (error) {

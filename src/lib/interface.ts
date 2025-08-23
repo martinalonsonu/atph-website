@@ -8,6 +8,7 @@ export interface Post {
   categories: number[];
   jetpack_featured_media_url?: string;
   excerpt: { rendered: string; protected: boolean };
+  tags: number[];
 }
 
 export type APIResponse<T> = T[];

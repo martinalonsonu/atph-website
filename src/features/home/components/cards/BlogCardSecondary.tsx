@@ -1,5 +1,10 @@
 import { Post } from "@/lib/interface";
-import { stripHtml } from "@/utils/helpers";
+import {
+  formatAuthor,
+  formatCategory,
+  formatTag,
+  stripHtml,
+} from "@/utils/helpers";
 import Image from "next/image";
 import Link from "next/link";
 import Title from "../title";
@@ -8,7 +13,7 @@ export default function BlogCardSecondary({ post }: { post: Post }) {
   return (
     <Link
       href={`/publicaciones/${post.slug}`}
-      className="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-lg transition flex flex-col hover:scale-102"
+      className="bg-white rounded-t-2xl overflow-hidden shadow-md hover:shadow-lg transition flex flex-col hover:scale-102"
     >
       <Image
         src={post.jetpack_featured_media_url || ""}
@@ -20,11 +25,18 @@ export default function BlogCardSecondary({ post }: { post: Post }) {
       <div className="p-4 flex flex-col gap-2">
         {/* Etiquetas */}
         <div className="flex gap-2 text-xs">
-          <span className="bg-[#ffe6e6] text-[#8b0000] font-semibold px-2 py-0.5 rounded">
-            News
+          <Image
+            src={formatAuthor(post.author).avatar}
+            width={25}
+            height={25}
+            alt={formatAuthor(post.author).name}
+            className="rounded-full hover:scale-105 transition"
+          />
+          <span className="flex items-center bg-[#ffe6e6] text-[#8b0000] font-semibold px-2 py-0.5 rounded">
+            {formatCategory(post.categories[0])}
           </span>
-          <span className="bg-[#f0e6ff] text-[#5a2ca0] font-semibold px-2 py-0.5 rounded">
-            Inspiration
+          <span className="flex items-center bg-[#f0e6ff] text-[#5a2ca0] font-semibold px-2 py-0.5 rounded">
+            {formatTag(post.tags[0])}
           </span>
         </div>
 

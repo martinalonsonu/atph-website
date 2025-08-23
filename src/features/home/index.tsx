@@ -5,6 +5,7 @@ import HeroSection from "./sections/HeroSection";
 import BlogSection from "./sections/BlogSection";
 import ServicesSection from "./sections/ServicesSection";
 import SocialsSection from "./sections/SocialsSection";
+import ArrowButton from "../shared/components/ArrowButton";
 
 export default function Home() {
   return (
@@ -16,6 +17,7 @@ export default function Home() {
         <ServicesSection />
         <BlogSection />
         <SocialsSection />
+        <ArrowButton />
       </main>
       <Footer />
     </div>
