@@ -29,14 +29,6 @@ button,
   cursor: pointer;
 }
 
-a {
-  text-decoration: none;
-}
-
-a:hover {
-  text-decoration: none;
-}
-
 address {
   font-style: normal;
 }

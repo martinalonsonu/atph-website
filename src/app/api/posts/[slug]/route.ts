@@ -1,4 +1,3 @@
-import type { NextApiRequest, NextApiResponse } from "next";
 import { fetchAPI } from "@/lib/fetcher";
 import { Post } from "@/lib/interface";
 

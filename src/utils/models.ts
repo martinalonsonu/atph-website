@@ -61,8 +61,8 @@ export const SERVICES_MODEL = {
 };
 
 export const ABOUT_MODEL = {
-  title: "ACERCA DE NOSOTROS",
-  tooltip: "NUESTRA HISTORIA",
+  title: "¿QUIÉNES SOMOS?",
+  tooltip: "ACERCA DE NOSOTROS",
   description:
     "Nuestra historia inicia en el corazón amoroso del Señor de Humildad y Paciencia. Inspirados por esta devoción, surgió la idea de crear A Tus Pies Humilde, con la misión de compartir esta devoción con el mundo...",
   image: "/assets/about-desktop.jpg",

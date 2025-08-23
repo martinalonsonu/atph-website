@@ -20,12 +20,6 @@ const workSans = Work_Sans({
   weight: ["400", "700", "900"],
 });
 
-export const metadata: Metadata = {
-  title: "A Tus Pies Humilde | Inicio",
-  description:
-    "Portal religioso católico y devocional | Transmisiones en vivo | Alfombras de Aserrín y Viruta teñida",
-};
-
 export default function RootLayout({
   children,
 }: Readonly<{
