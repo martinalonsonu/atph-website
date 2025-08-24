@@ -9,6 +9,7 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import Title from "../title";
+import Badge from "@/features/shared/components/Badge";
 
 const BlogCardPrincipal = ({ mainPost }: { mainPost: Post }) => {
   return (
@@ -35,12 +36,7 @@ const BlogCardPrincipal = ({ mainPost }: { mainPost: Post }) => {
             alt={formatAuthor(mainPost.author).name}
             className="rounded-full hover:scale-105 transition"
           />
-          <span className="flex items-center bg-[#ffe6e6] text-[#8b0000] font-semibold px-2 py-0.5 rounded">
-            {formatCategory(mainPost.categories[0])}
-          </span>
-          <span className="flex items-center bg-[#f0e6ff] text-[#5a2ca0] font-semibold px-2 py-0.5 rounded">
-            {formatTag(mainPost.tags[0])}
-          </span>
+          <Badge categoryId={mainPost.categories[0]} tagId={mainPost.tags[0]} />
         </div>
         <Title type="tertiary" title={stripHtml(mainPost.title.rendered)} />
         <p className="text-gray-700 text-base line-clamp-4">

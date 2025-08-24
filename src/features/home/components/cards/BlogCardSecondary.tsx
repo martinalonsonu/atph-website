@@ -8,6 +8,7 @@ import {
 import Image from "next/image";
 import Link from "next/link";
 import Title from "../title";
+import Badge from "@/features/shared/components/Badge";
 
 export default function BlogCardSecondary({ post }: { post: Post }) {
   return (
@@ -32,12 +33,7 @@ export default function BlogCardSecondary({ post }: { post: Post }) {
             alt={formatAuthor(post.author).name}
             className="rounded-full hover:scale-105 transition"
           />
-          <span className="flex items-center bg-[#ffe6e6] text-[#8b0000] font-semibold px-2 py-0.5 rounded">
-            {formatCategory(post.categories[0])}
-          </span>
-          <span className="flex items-center bg-[#f0e6ff] text-[#5a2ca0] font-semibold px-2 py-0.5 rounded">
-            {formatTag(post.tags[0])}
-          </span>
+          <Badge categoryId={post.categories[0]} tagId={post.tags[0]} />
         </div>
 
         {/* Título */}

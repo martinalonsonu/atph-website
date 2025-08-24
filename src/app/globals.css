@@ -46,6 +46,26 @@ address {
   color: var(--color-primary);
 }
 
+.content-blog p {
+  margin-bottom: 16px;
+  font-family: var(--font-mulish), serif;
+  font-size: 1rem;
+}
+
+.content-blog h2,
+h3 {
+  font-family: var(--font-cinzel-decorative), serif;
+  margin-bottom: 10px;
+  font-weight: 700;
+  font-size: 1.125rem;
+}
+
+.content-blog hr {
+  margin-bottom: 16px;
+  color: #8b0000;
+  opacity: 0.6;
+}
+
 /* body {
     width: 100%;
     background-image: url('/assets/bg-homepage.jpg');
