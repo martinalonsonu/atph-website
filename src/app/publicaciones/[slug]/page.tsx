@@ -7,7 +7,7 @@ interface PostProps {
 }
 
 const Post = async ({ params }: PostProps) => {
-  const { slug } = await params;
+  const { slug } = params;
 
   return <PostPage slug={slug} />;
 };
