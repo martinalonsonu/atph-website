@@ -1,15 +1,15 @@
 import { Post } from "@/lib/interface";
 import React from "react";
 
-const useFetchBlog = (amount: number) => {
-  const [posts, setPosts] = React.useState<Post[]>([]);
+const useFetchPost = (slug: string) => {
+  const [post, setPost] = React.useState<Post>();
   const [loading, setLoading] = React.useState<boolean>(true);
 
   const fetchPosts = async () => {
     try {
-      const response = await fetch(`/api/posts/?amount=${amount}`);
+      const response = await fetch(`/api/post/${slug}`);
       const data = await response.json();
-      setPosts(data);
+      setPost(data);
     } catch (error) {
       console.error("Error fetching posts:", error);
     } finally {
@@ -21,7 +21,7 @@ const useFetchBlog = (amount: number) => {
     fetchPosts();
   }, []);
 
-  return { posts, loading };
+  return { post, loading };
 };
 
-export default useFetchBlog;
+export default useFetchPost;

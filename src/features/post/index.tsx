@@ -1,0 +1,59 @@
+"use client";
+
+import HeaderNav from "../shared/structured/headerNav";
+import Footer from "../shared/structured/footer";
+import Badge from "../shared/components/Badge";
+import Heading from "./components/Heading";
+import useFetchPost from "@/hooks/useFetchPost";
+import ProfileCard from "./components/ProfileCard";
+
+export default function PostPage({ slug }: { slug: string }) {
+  const { post, loading } = useFetchPost(slug);
+
+  return (
+    <div className="w-full flex flex-col bg-[#fff8f5]">
+      <HeaderNav />
+      <main className="min-h-screen bg-[#fff8f5] flex justify-center p-6">
+        <div className="max-w-4xl w-full bg-transparent rounded-xl lg:p-8">
+          {/* Badge */}
+          <div className="flex justify-center mb-4 gap-2.5">
+            <Badge
+              categoryId={post?.categories[0] || 1}
+              tagId={post?.tags[0] || 1}
+            />
+          </div>
+
+          {/* Heading */}
+          <Heading
+            title={post?.title.rendered || ""}
+            subtitle={post?.excerpt.rendered || ""}
+            author={post?.author || 1}
+            date={post?.date || ""}
+            image={post?.jetpack_featured_media_url}
+            loading={loading}
+          />
+
+          {/* Content */}
+          <div className="grid lg:grid-cols-3 gap-8">
+            {/* Main Text */}
+            <div className="lg:col-span-2 space-y-6">
+              <div
+                className="content-blog"
+                dangerouslySetInnerHTML={{
+                  __html: post?.content.rendered || "",
+                }}
+              />
+            </div>
+
+            {/* Sidebar */}
+            <aside className="space-y-6">
+              {/* Ingredients */}
+              <ProfileCard />
+            </aside>
+          </div>
+        </div>
+      </main>
+      <Footer />
+    </div>
+  );
+}
