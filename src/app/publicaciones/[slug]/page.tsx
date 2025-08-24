@@ -1,15 +1,7 @@
 import PostPage from "@/features/post";
 
-interface PostProps {
-  params: {
-    slug: string;
-  };
-}
-
-const Post = async ({ params }: PostProps) => {
+export default async function Post({ params }: { params: { slug: string } }) {
   const { slug } = params;
 
   return <PostPage slug={slug} />;
-};
-
-export default Post;
+}
