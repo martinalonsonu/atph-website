@@ -1,12 +1,13 @@
 import { fetchAPI } from "@/lib/fetcher";
 import { Post } from "@/lib/interface";
+import { NextRequest } from "next/server";
 
-interface Params {
-  params: { slug: string };
-}
+export async function GET(
+  req: NextRequest,
+  context: { params: Promise<{ slug: string }> }
+) {
+  const { slug } = await context.params;
 
-export async function GET(req: Request, { params }: Params) {
-  const { slug } = await params;
   try {
     const post = await fetchAPI<Post[]>(`/posts/?slug=${slug}`, {
       _fields:
