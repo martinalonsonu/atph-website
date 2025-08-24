@@ -4,9 +4,9 @@ import { NextRequest } from "next/server";
 
 export async function GET(
   req: NextRequest,
-  { params }: { params: { slug: string } }
+  context: { params: Promise<{ slug: string }> }
 ) {
-  const { slug } = params;
+  const { slug } = await context.params;
 
   try {
     const post = await fetchAPI<Post[]>(`/posts/?slug=${slug}`, {
