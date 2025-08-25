@@ -9,7 +9,7 @@ const ArrowButton = () => {
   return (
     <div
       className={clsx(
-        "cursor-pointer fixed bg-white rounded-full p-2 shadow-2xl shadow-amber-900 right-4 bottom-5 z-[45] transition-opacity duration-300 hover:scale-110",
+        "cursor-pointer fixed bg-gray-500/50 rounded-full p-2 shadow-2xl shadow-amber-900 right-4 bottom-5 z-[45] transition-opacity duration-300 hover:scale-110",
         "lg:right-9 lg:bottom-10",
         !isScrolled && "hidden"
       )}
@@ -20,6 +20,7 @@ const ArrowButton = () => {
         height={25}
         viewBox="0 0 48 48"
         xmlns="http://www.w3.org/2000/svg"
+        fill="#8b0000"
       >
         <path d="M0 0h48v48H0z" fill="none" />
         <path d="m6.586 30.586 2.828 2.828L24 18.828l14.586 14.586 2.828-2.828L24 13.172z" />

@@ -5,7 +5,7 @@ import Link from "next/link";
 
 export default function ProfileCard() {
   return (
-    <div className="max-w-sm mx-auto rounded-2xl overflow-hidden shadow-lg bg-white lg:sticky lg:top-[95px]">
+    <div className="max-w-sm mx-auto rounded-t-2xl overflow-hidden shadow-lg bg-white lg:sticky lg:top-[95px]">
       {/* Banner superior */}
       <div className="h-28 bg-gradient-to-r from-black via-blue-900 to-red-900"></div>
 
