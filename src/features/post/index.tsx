@@ -6,11 +6,14 @@ import Badge from "../shared/components/Badge";
 import Heading from "./components/Heading";
 import useFetchPost from "@/hooks/useFetchPost";
 import ProfileCard from "./components/ProfileCard";
+import SpinnerPageLoad from "../shared/components/SpinnerPageLoad";
 
 export default function PostPage({ slug }: { slug: string }) {
   const { post, loading } = useFetchPost(slug);
 
-  return (
+  return loading ? (
+    <SpinnerPageLoad />
+  ) : (
     <div className="w-full flex flex-col bg-[#fff8f5]">
       <HeaderNav />
       <main className="min-h-screen bg-[#fff8f5] flex justify-center p-6">
@@ -31,6 +34,7 @@ export default function PostPage({ slug }: { slug: string }) {
             date={post?.date || ""}
             image={post?.jetpack_featured_media_url}
             loading={loading}
+            slug={slug}
           />
 
           {/* Content */}
@@ -47,7 +51,6 @@ export default function PostPage({ slug }: { slug: string }) {
 
             {/* Sidebar */}
             <aside className="space-y-6">
-              {/* Ingredients */}
               <ProfileCard />
             </aside>
           </div>

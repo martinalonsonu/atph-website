@@ -12,7 +12,12 @@ import useFetchBlog from "@/hooks/useFetchBlog";
 export default function BlogSection() {
   const { posts, loading } = useFetchBlog(4);
 
-  if (loading) return <p>Cargando...</p>;
+  if (loading)
+    return (
+      <div className="w-full flex justify-center items-center bg-[#fefefe] h-[300px]">
+        <div className="spinner mx-auto" />
+      </div>
+    );
   if (!posts.length) return null;
 
   const [mainPost, ...otherPosts] = posts;
