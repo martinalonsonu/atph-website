@@ -1,6 +1,5 @@
 import React from "react";
 
-import Link from "next/link";
 import Wrapper from "@/features/shared/layout/wrapper";
 import Image from "next/image";
 import { ABOUT_MODEL } from "@/utils/models";

@@ -48,7 +48,7 @@ export async function generateMetadata({
   return {
     title: post.title?.rendered || "Post sin título",
     description: cleanDescription,
-    keywords: post.tags?.map((tag: any) => tag.name).join(", ") || "",
+    keywords: ["atph", "huacho"],
     authors: [{ name: formatAuthor(post?.author).name || "Autor desconocido" }],
 
     openGraph: {
