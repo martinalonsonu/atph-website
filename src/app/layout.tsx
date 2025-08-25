@@ -1,4 +1,3 @@
-import type { Metadata } from "next";
 import { Mulish, Cinzel_Decorative, Work_Sans } from "next/font/google";
 import "./globals.css";
 

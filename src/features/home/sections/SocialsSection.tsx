@@ -1,6 +1,5 @@
 import React from "react";
 
-import Link from "next/link";
 import Wrapper from "../../shared/layout/wrapper";
 import Button from "@/features/shared/components/Button";
 import Title from "../components/title";

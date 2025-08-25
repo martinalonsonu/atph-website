@@ -12,6 +12,7 @@ export async function GET(request: Request) {
     });
     return Response.json(posts, { status: 200 });
   } catch (error) {
+    console.error(error);
     return Response.json({ error: "Error fetching posts" }, { status: 500 });
   }
 }

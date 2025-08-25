@@ -1,10 +1,5 @@
 import { Post } from "@/lib/interface";
-import {
-  formatAuthor,
-  formatCategory,
-  formatTag,
-  stripHtml,
-} from "@/utils/helpers";
+import { formatAuthor, stripHtml } from "@/utils/helpers";
 import Image from "next/image";
 import Link from "next/link";
 import Title from "../title";

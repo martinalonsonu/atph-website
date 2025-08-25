@@ -1,8 +1,5 @@
 "use client";
 
-import { useEffect, useState } from "react";
-import type { Post } from "@/lib/interface";
-import Link from "next/link";
 import BlogCardSecondary from "../components/cards/BlogCardSecondary";
 import BlogCardPrincipal from "../components/cards/BlogCardPrincipal";
 import Button from "@/features/shared/components/Button";
