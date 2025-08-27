@@ -2,13 +2,13 @@ import { Post } from "@/lib/interface";
 import { formatAuthor, stripHtml } from "@/utils/helpers";
 import Image from "next/image";
 import Link from "next/link";
-import Title from "../title";
+import Title from "@/features/home/components/title";
 import Badge from "@/features/shared/components/Badge";
 
 export default function BlogCardSecondary({ post }: { post: Post }) {
   return (
     <Link
-      href={`/publicaciones/${post.slug}`}
+      href={`/blog/${post.slug}`}
       className="bg-white rounded-t-2xl overflow-hidden shadow-md hover:shadow-lg transition flex flex-col hover:scale-102"
     >
       <Image
@@ -27,6 +27,7 @@ export default function BlogCardSecondary({ post }: { post: Post }) {
             height={25}
             alt={formatAuthor(post.author).name}
             className="rounded-full hover:scale-105 transition"
+            loading="lazy"
           />
           <Badge categoryId={post.categories[0]} tagId={post.tags[0]} />
         </div>

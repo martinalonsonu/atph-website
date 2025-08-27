@@ -7,9 +7,17 @@ import Heading from "./components/Heading";
 import useFetchPost from "@/hooks/useFetchPost";
 import ProfileCard from "./components/ProfileCard";
 import SpinnerPageLoad from "../shared/components/SpinnerPageLoad";
+import { Post } from "@/lib/interface";
 
 export default function PostPage({ slug }: { slug: string }) {
   const { post, loading } = useFetchPost(slug);
+
+  const timeReading = (post: Post | undefined) => {
+    if (!post) return 0;
+    const text = post?.content?.rendered.replace(/<[^>]+>/g, "");
+    const words = text?.trim().split(/\s+/).length || 0;
+    return Math.ceil(words / 200);
+  };
 
   return loading ? (
     <SpinnerPageLoad />
@@ -35,6 +43,7 @@ export default function PostPage({ slug }: { slug: string }) {
             image={post?.jetpack_featured_media_url}
             loading={loading}
             slug={slug}
+            timeReading={timeReading(post)}
           />
 
           {/* Content */}
@@ -44,7 +53,7 @@ export default function PostPage({ slug }: { slug: string }) {
               <div
                 className="content-blog"
                 dangerouslySetInnerHTML={{
-                  __html: post?.content.rendered || "",
+                  __html: post?.content?.rendered || "",
                 }}
               />
             </div>
