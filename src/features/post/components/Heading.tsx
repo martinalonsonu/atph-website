@@ -52,6 +52,7 @@ const Heading: FC<HeadingProps> = ({
         </div>
         <span>•</span>
         <span className="text-sm font-mulish font-bold">
+          📆{" "}
           {new Date(date).toLocaleDateString("es-PE", {
             day: "2-digit",
             month: "short",
@@ -60,11 +61,11 @@ const Heading: FC<HeadingProps> = ({
         </span>
         <span className="hidden lg:block">•</span>
         <span className="text-sm font-mulish font-bold">
-          {timeReading} min de lectura
+          ⏱ {timeReading} min de lectura
         </span>
       </div>
 
-      <Share slug={slug} />
+      <Share slug={slug} isDesktop={false} />
 
       {/* Image */}
       <div className="mb-8">
