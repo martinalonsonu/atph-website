@@ -17,6 +17,7 @@ export default function ProfileCard() {
           width={100}
           height={100}
           className="rounded-full border-[#3D7793] bg-white border-2 object-cover"
+          loading="lazy"
         />
       </div>
 

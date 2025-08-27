@@ -9,7 +9,7 @@ import Badge from "@/features/shared/components/Badge";
 const BlogCardPrincipal = ({ mainPost }: { mainPost: Post }) => {
   return (
     <Link
-      href={`/publicaciones/${mainPost.slug}`}
+      href={`/blog/${mainPost.slug}`}
       className="bg-white rounded-t-2xl shadow-lg overflow-hidden flex flex-col lg:flex-row mb-10 hover:shadow-xl transition hover:scale-102"
     >
       {/* Imagen izquierda */}
@@ -19,6 +19,7 @@ const BlogCardPrincipal = ({ mainPost }: { mainPost: Post }) => {
         width={500}
         height={400}
         className="w-full lg:w-1/2 h-[250px] lg:h-auto object-cover"
+        loading="lazy"
       />
 
       {/* Contenido derecha */}
@@ -30,6 +31,7 @@ const BlogCardPrincipal = ({ mainPost }: { mainPost: Post }) => {
             height={25}
             alt={formatAuthor(mainPost.author).name}
             className="rounded-full hover:scale-105 transition"
+            loading="lazy"
           />
           <Badge categoryId={mainPost.categories[0]} tagId={mainPost.tags[0]} />
         </div>

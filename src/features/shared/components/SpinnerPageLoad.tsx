@@ -17,6 +17,7 @@ const SpinnerPageLoad = () => {
         alt="Profile"
         width={100}
         height={100}
+        loading="lazy"
       />
       <div className="spinner" />
     </div>

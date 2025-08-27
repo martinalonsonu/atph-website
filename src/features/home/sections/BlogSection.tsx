@@ -1,6 +1,6 @@
 "use client";
 
-import BlogCardSecondary from "../components/cards/BlogCardSecondary";
+import BlogCardSecondary from "@/features/shared/components/BlogCardSecondary";
 import BlogCardPrincipal from "../components/cards/BlogCardPrincipal";
 import Button from "@/features/shared/components/Button";
 import Title from "../components/title";

@@ -1,13 +1,15 @@
 import { Post } from "@/lib/interface";
 import React from "react";
 
-const useFetchBlog = (amount: number) => {
+const useFetchBlog = (amount: number, category?: number) => {
   const [posts, setPosts] = React.useState<Post[]>([]);
   const [loading, setLoading] = React.useState<boolean>(true);
 
   const fetchPosts = async () => {
     try {
-      const response = await fetch(`/api/posts/?amount=${amount}`);
+      const response = await fetch(
+        `/api/posts/?amount=${amount}${category ? `&category=${category}` : ""}`
+      );
       const data = await response.json();
       setPosts(data);
     } catch (error) {
