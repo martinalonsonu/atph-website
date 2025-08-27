@@ -23,6 +23,19 @@ export function formatTag(id: number) {
 export function formatAuthor(id: number) {
   const author = AUTHORS.find((author) => author.id === id);
   return author
-    ? { name: author.name, avatar: author.avatar }
-    : { name: "ATPH", avatar: "" };
+    ? {
+        name: author.name,
+        nick: author.slug,
+        avatar: author.avatar,
+        ocupation: author.ocupation,
+        description: author.description,
+      }
+    : {
+        name: "ATPH",
+        nick: "atph",
+        avatar: "",
+        ocupation: "Sitio Web Oficial",
+        description:
+          "Portal de noticias y artículos sobre devociones y tradiciones.",
+      };
 }

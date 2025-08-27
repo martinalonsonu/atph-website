@@ -19,9 +19,12 @@ export const TAGS = [
 export const AUTHORS = [
   {
     id: 255610245,
-    name: "Martin Núñez Navarro",
+    name: "Martin Núñez",
     slug: "martinalonsonu",
     avatar:
       "https://atphdev.wordpress.com/wp-content/uploads/2025/08/514501221_30044079625240248_4146382242185381156_n.jpg",
+    ocupation: "Fotógrafo y Desarrollador Web",
+    description:
+      "Crecí entre devociones y hoy quiero compartirlas con el mundo. A través de la cámara y el código intento mostrar la belleza de la fe en este raro mundo del internet. Soy amigo de Martincito (sí, el santito de la escoba). Y cuando no estoy en una procesión o codeando, me encontrarás alentando a Alianza Lima.",
   },
 ];
