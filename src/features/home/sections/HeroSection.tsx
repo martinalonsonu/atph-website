@@ -1,27 +1,29 @@
 "use client";
 
-import useScroller from "@/hooks/useScroller";
+// import useScroller from "@/hooks/useScroller";
 import React from "react";
 import { HERO_INFORMATION } from "@/utils/models";
 import Image from "next/image";
 
 const HeroSection = () => {
-  const { currentItem } = useScroller(HERO_INFORMATION);
+  // const { currentItem } = useScroller(HERO_INFORMATION);
   return (
     <section className="w-full h-auto lg:h-[720px] flex flex-col lg:flex-row bg-[#fff8f5]">
       <div className="lg:w-[33%] h-full">
         <Image
-          src={currentItem.image}
+          // src={currentItem.image}
+          src={HERO_INFORMATION[0].image}
           className="hidden lg:block w-full h-[285px] lg:h-full object-cover"
-          alt={currentItem.alt}
+          // alt={currentItem.alt}
+          alt={HERO_INFORMATION[0].alt}
           width={419}
           height={720}
           priority
         />
         <Image
-          src={currentItem.imageMobile}
+          src={HERO_INFORMATION[0].imageMobile}
           className="block lg:hidden w-full h-[285px] lg:h-full object-cover"
-          alt={currentItem.alt}
+          alt={HERO_INFORMATION[0].alt}
           width={400}
           height={285}
           priority
