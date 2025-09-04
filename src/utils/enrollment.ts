@@ -19,7 +19,7 @@ export const TAGS = [
 export const AUTHORS = [
   {
     id: 255610245,
-    name: "Martin Núñez",
+    name: "Martin Nuñez",
     slug: "martinalonsonu",
     avatar:
       "https://atphdev.wordpress.com/wp-content/uploads/2025/08/514501221_30044079625240248_4146382242185381156_n.jpg",
