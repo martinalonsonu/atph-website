@@ -9,8 +9,8 @@ const ArrowButton = () => {
   return (
     <div
       className={clsx(
-        "cursor-pointer fixed bg-gray-500/50 rounded-full p-2 shadow-2xl shadow-amber-900 right-4 bottom-5 z-[45] transition-opacity duration-300 hover:scale-110",
-        "lg:right-9 lg:bottom-10",
+        "cursor-pointer fixed bg-white rounded-full p-2 shadow-md/80 shadow-amber-900 right-4 bottom-5 z-[45] transition-opacity duration-300 hover:scale-110",
+        "lg:right-10 lg:bottom-10",
         !isScrolled && "hidden"
       )}
       onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}

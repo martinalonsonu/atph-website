@@ -1,5 +1,6 @@
 import { Mulish, Cinzel_Decorative, Work_Sans } from "next/font/google";
 import "./globals.css";
+import ArrowButton from "@/features/shared/components/ArrowButton";
 
 const cinzelDecorative = Cinzel_Decorative({
   variable: "--font-cinzel-decorative",
@@ -29,6 +30,7 @@ export default function RootLayout({
       <body
         className={`${cinzelDecorative.variable} ${mulish.variable} ${workSans.variable} antialiased`}
       >
+        <ArrowButton />
         {children}
       </body>
     </html>

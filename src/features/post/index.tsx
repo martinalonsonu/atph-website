@@ -9,7 +9,6 @@ import ProfileCard from "./components/ProfileCard";
 import SpinnerPageLoad from "../shared/components/SpinnerPageLoad";
 import { Post } from "@/lib/interface";
 import Share from "./components/Share";
-import Image from "next/image";
 import Author from "./components/Author";
 
 export default function PostPage({ slug }: { slug: string }) {
