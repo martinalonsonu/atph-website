@@ -44,7 +44,6 @@ const Heading: FC<HeadingProps> = ({
             height={25}
             alt={formatAuthor(author).name}
             className="rounded-full hover:scale-105 transition"
-            loading="lazy"
             quality={75}
             fetchPriority="high"
             priority
