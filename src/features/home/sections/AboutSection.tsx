@@ -29,6 +29,7 @@ const AboutSection = () => {
               height={600}
               className="w-full lg:w-[500px] h-[300px] lg:h-[550px] object-cover rounded-br-4xl rounded-tl-4xl"
               loading="lazy"
+              quality={75}
             />
           </div>
         </div>

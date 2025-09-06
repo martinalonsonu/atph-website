@@ -45,6 +45,9 @@ const Heading: FC<HeadingProps> = ({
             alt={formatAuthor(author).name}
             className="rounded-full hover:scale-105 transition"
             loading="lazy"
+            quality={75}
+            fetchPriority="high"
+            priority
           />
           <span className="font-mulish font-bold">
             {formatAuthor(author).name}

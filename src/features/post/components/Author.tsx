@@ -19,6 +19,7 @@ const Author = ({ authorId }: { authorId: number }) => {
           width={60}
           height={60}
           className="rounded-full border border-gray-200 shadow-sm hover:scale-105 transition"
+          quality={75}
         />
         <div>
           <p className="font-bold text-lg whitespace-nowrap font-mulish text-gray-800">
