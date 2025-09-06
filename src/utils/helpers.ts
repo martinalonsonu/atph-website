@@ -2,12 +2,22 @@ import { AUTHORS, CATEGORIES } from "./enrollment";
 
 export function stripHtml(html: string) {
   if (!html) return "";
+
   const text = html.replace(/<[^>]+>/g, "");
+
   if (typeof window !== "undefined") {
     const doc = new DOMParser().parseFromString(text, "text/html");
-    return doc.documentElement.textContent || "";
+    return doc.body.textContent || "";
   }
-  return text;
+
+  return text
+    .replace(/&nbsp;/g, " ")
+    .replace(/&amp;/g, "&")
+    .replace(/&lt;/g, "<")
+    .replace(/&gt;/g, ">")
+    .replace(/&quot;/g, '"')
+    .replace(/&#39;/g, "'")
+    .replace(/&hellip;/g, "…");
 }
 
 export function formatCategory(id: number) {

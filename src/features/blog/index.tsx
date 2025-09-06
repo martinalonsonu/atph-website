@@ -1,14 +1,13 @@
-"use client";
-
-import useFetchBlog from "@/hooks/useFetchBlog";
 import React from "react";
 import SpinnerPageLoad from "../shared/components/SpinnerPageLoad";
 import HeaderNav from "../shared/structured/headerNav";
 import BlogCardSecondary from "../shared/components/BlogCardSecondary";
 import Footer from "../shared/structured/footer";
+import { getPosts } from "@/lib/actions";
 
-const BlogPage = () => {
-  const { loading, posts } = useFetchBlog(15);
+const BlogPage = async () => {
+  const loading = false;
+  const posts = await getPosts(15);
   return loading ? (
     <SpinnerPageLoad />
   ) : (

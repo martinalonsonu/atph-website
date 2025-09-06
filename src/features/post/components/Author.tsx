@@ -4,7 +4,6 @@ import React from "react";
 
 const Author = ({ authorId }: { authorId: number }) => {
   const author = formatAuthor(authorId);
-  console.log("Author data:", author);
   return (
     <div className="bg-white max-w-[384px] mx-auto rounded-t-2xl shadow-md p-4">
       {/* Encabezado */}

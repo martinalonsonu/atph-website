@@ -1,18 +1,17 @@
-"use client";
-
 import HeaderNav from "../shared/structured/headerNav";
 import Footer from "../shared/structured/footer";
 import Badge from "../shared/components/Badge";
 import Heading from "./components/Heading";
-import useFetchPost from "@/hooks/useFetchPost";
 import ProfileCard from "./components/ProfileCard";
 import SpinnerPageLoad from "../shared/components/SpinnerPageLoad";
 import { Post } from "@/lib/interface";
 import Share from "./components/Share";
 import Author from "./components/Author";
+import { getPostBySlug } from "@/lib/actions";
 
-export default function PostPage({ slug }: { slug: string }) {
-  const { post, loading } = useFetchPost(slug);
+const PostPage = async ({ slug }: { slug: string }) => {
+  const post = await getPostBySlug(slug);
+  const loading = false;
 
   const timeReading = (post: Post | undefined) => {
     if (!post) return 0;
@@ -38,8 +37,8 @@ export default function PostPage({ slug }: { slug: string }) {
 
           {/* Heading */}
           <Heading
-            title={post?.title.rendered || ""}
-            subtitle={post?.excerpt.rendered || ""}
+            title={post?.title?.rendered || ""}
+            subtitle={post?.excerpt?.rendered || ""}
             author={post?.author || 1}
             date={post?.date || ""}
             image={post?.jetpack_featured_media_url}
@@ -72,4 +71,6 @@ export default function PostPage({ slug }: { slug: string }) {
       <Footer />
     </div>
   );
-}
+};
+
+export default PostPage;
