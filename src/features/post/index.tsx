@@ -20,6 +20,22 @@ const PostPage = async ({ slug }: { slug: string }) => {
     return Math.ceil(words / 200);
   };
 
+  const getFirstParagraph = (html: string | undefined) => {
+    if (!html) return "";
+    const match = html.match(/<p[^>]*>(.*?)<\/p>/i);
+    return match ? match[0] : "";
+  };
+
+  const removeFirstParagraph = (html: string | undefined) => {
+    if (!html) return "";
+    return html.replace(/<p[^>]*>.*?<\/p>/i, "");
+  };
+
+  const firstParagraph = getFirstParagraph(post?.content?.rendered);
+  const contentWithoutFirstParagraph = removeFirstParagraph(
+    post?.content?.rendered
+  );
+
   return loading ? (
     <SpinnerPageLoad />
   ) : (
@@ -38,7 +54,7 @@ const PostPage = async ({ slug }: { slug: string }) => {
           {/* Heading */}
           <Heading
             title={post?.title?.rendered || ""}
-            subtitle={post?.excerpt?.rendered || ""}
+            subtitle={firstParagraph}
             author={post?.author || 1}
             date={post?.date || ""}
             image={post?.jetpack_featured_media_url}
@@ -54,7 +70,7 @@ const PostPage = async ({ slug }: { slug: string }) => {
               <div
                 className="content-blog"
                 dangerouslySetInnerHTML={{
-                  __html: post?.content?.rendered || "",
+                  __html: contentWithoutFirstParagraph || "",
                 }}
               />
             </div>

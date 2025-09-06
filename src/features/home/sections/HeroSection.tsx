@@ -19,6 +19,8 @@ const HeroSection = () => {
           width={419}
           height={720}
           priority
+          quality={75}
+          fetchPriority="high"
         />
         <Image
           src={HERO_INFORMATION[0].imageMobile}
@@ -27,6 +29,8 @@ const HeroSection = () => {
           width={400}
           height={285}
           priority
+          quality={75}
+          fetchPriority="high"
         />
       </div>
       <div className="flex flex-col lg:w-[100%] flex-1">

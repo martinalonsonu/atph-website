@@ -17,6 +17,7 @@ export default function BlogCardSecondary({ post }: { post: Post }) {
         width={400}
         height={200}
         className="w-full h-[200px] object-cover"
+        quality={75}
       />
       <div className="p-4 flex flex-col gap-2">
         {/* Etiquetas */}
@@ -28,6 +29,7 @@ export default function BlogCardSecondary({ post }: { post: Post }) {
             alt={formatAuthor(post.author).name}
             className="rounded-full hover:scale-105 transition"
             loading="lazy"
+            quality={75}
           />
           <Badge categoryId={post.categories[0]} tagId={post.tags[0]} />
         </div>
@@ -37,7 +39,7 @@ export default function BlogCardSecondary({ post }: { post: Post }) {
 
         {/* Descripción */}
         <p className="text-sm text-gray-700 line-clamp-2">
-          {stripHtml(post.excerpt.rendered)}
+          {stripHtml(post?.excerpt?.rendered || "")}
         </p>
 
         {/* Fecha */}

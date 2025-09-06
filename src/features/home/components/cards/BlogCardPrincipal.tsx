@@ -20,6 +20,7 @@ const BlogCardPrincipal = ({ mainPost }: { mainPost: Post }) => {
         height={400}
         className="w-full lg:w-1/2 h-[250px] lg:h-auto object-cover"
         loading="lazy"
+        quality={75}
       />
 
       {/* Contenido derecha */}
@@ -32,12 +33,13 @@ const BlogCardPrincipal = ({ mainPost }: { mainPost: Post }) => {
             alt={formatAuthor(mainPost.author).name}
             className="rounded-full hover:scale-105 transition"
             loading="lazy"
+            quality={75}
           />
           <Badge categoryId={mainPost.categories[0]} tagId={mainPost.tags[0]} />
         </div>
         <Title type="tertiary" title={stripHtml(mainPost.title.rendered)} />
         <p className="text-gray-700 text-base line-clamp-4">
-          {stripHtml(mainPost.excerpt.rendered)}
+          {stripHtml(mainPost?.excerpt?.rendered || "")}
         </p>
         <span className="text-xs text-gray-500 mt-2">
           {new Date(mainPost.date).toLocaleDateString("es-PE", {

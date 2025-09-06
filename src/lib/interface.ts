@@ -7,7 +7,7 @@ export interface Post {
   author: number;
   categories: number[];
   jetpack_featured_media_url?: string;
-  excerpt: { rendered: string; protected: boolean };
+  excerpt?: { rendered: string; protected: boolean };
   tags: number[];
 }
 

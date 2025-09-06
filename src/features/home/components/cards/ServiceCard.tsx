@@ -20,6 +20,7 @@ const CardService: React.FC<CardServiceProps> = (props) => {
         height={340}
         className="w-full h-[180px] lg:h-[340px] rounded-t-4xl object-cover"
         loading="lazy"
+        quality={75}
       />
       <div className="w-full p-5 lg:py-8 lg:px-10">
         <Title type="tertiary" title={title} />
