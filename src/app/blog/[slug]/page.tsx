@@ -1,28 +1,7 @@
 import PostPage from "@/features/post";
 import { formatAuthor, formatCategory } from "@/utils/helpers";
 import { Metadata } from "next";
-
-async function getPost(slug: string) {
-  try {
-    const baseUrl =
-      process.env.NEXTAUTH_URL ||
-      process.env.NEXT_PUBLIC_URL ||
-      "http://localhost:3000";
-    const response = await fetch(`${baseUrl}/api/post/${slug}`, {
-      cache: "no-store",
-    });
-
-    if (!response.ok) {
-      return null;
-    }
-
-    const post = await response.json();
-    return post;
-  } catch (error) {
-    console.error("Error fetching post:", error);
-    return null;
-  }
-}
+import { getPostBySlug } from "@/lib/actions";
 
 export async function generateMetadata({
   params,
@@ -30,7 +9,7 @@ export async function generateMetadata({
   params: Promise<{ slug: string }>;
 }): Promise<Metadata> {
   const { slug } = await params;
-  const post = await getPost(slug);
+  const post = await getPostBySlug(slug);
 
   if (!post) {
     return {

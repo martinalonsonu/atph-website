@@ -1,13 +1,12 @@
-"use client";
-
 import BlogCardSecondary from "@/features/shared/components/BlogCardSecondary";
 import BlogCardPrincipal from "../components/cards/BlogCardPrincipal";
 import Button from "@/features/shared/components/Button";
 import Title from "../components/title";
-import useFetchBlog from "@/hooks/useFetchBlog";
+import { getPosts } from "@/lib/actions";
 
-export default function BlogSection() {
-  const { posts, loading } = useFetchBlog(4);
+const BlogSection = async () => {
+  const loading = false;
+  const posts = await getPosts(4);
 
   if (loading)
     return (
@@ -40,4 +39,6 @@ export default function BlogSection() {
       </div>
     </section>
   );
-}
+};
+
+export default BlogSection;
