@@ -14,24 +14,32 @@ concurrency:
   group: "pages"
   cancel-in-progress: false
 
+env:
+  API_BASE: ${{ secrets.API_BASE }}
+  WORDPRESS_API_URL: ${{ secrets.WORDPRESS_API_URL }}
+
 jobs:
   build:
     runs-on: ubuntu-latest
+    environment: production
     steps:
       - uses: actions/checkout@v4
-      
+
       - name: Set up Node
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
         with:
           node-version: "18"
-          cache: 'npm'
-          
+          cache: "npm"
+
       - name: Install dependencies
         run: npm install
-        
+
       - name: Build
+        env:
+          API_BASE: ${{ secrets.API_BASE }}
+          WORDPRESS_API_URL: ${{ secrets.WORDPRESS_API_URL }}
         run: npm run build
-        
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v2
         with:
