@@ -20,7 +20,7 @@ jobs:
     environment: production
     env:
       API_BASE: ${{ secrets.API_BASE }}
-      WORDPRESS_API_URL: ${{ secrets.WORDPRESS_API_URL }}
+      NODE_ENV: ${{ secrets.NODE_ENV }}
       NEXT_TELEMETRY_DISABLED: 1
 
     steps:
@@ -47,7 +47,7 @@ jobs:
       - name: Check environment variables
         run: |
           echo "✅ API_BASE: $API_BASE"
-          echo "✅ WORDPRESS_API_URL: $WORDPRESS_API_URL"
+          echo "✅ NODE_ENV: $NODE_ENV"
 
       - name: Disable Next.js telemetry
         run: npx next telemetry disable
