@@ -20,7 +20,7 @@ jobs:
     environment: production
     env:
       API_BASE: ${{ secrets.API_BASE }}
-      NODE_ENV: ${{ secrets.NODE_ENV }}
+      APP_ENVIRONMENT: ${{ secrets.APP_ENVIRONMENT }}
       NEXT_TELEMETRY_DISABLED: 1
 
     steps:
@@ -44,12 +44,12 @@ jobs:
       - name: Install dependencies
         run: npm ci --include=dev
         env:
-          NODE_ENV: development
+          APP_ENVIRONMENT: development
 
       - name: Check environment variables
         run: |
           echo "✅ API_BASE: $API_BASE"
-          echo "✅ NODE_ENV: $NODE_ENV"
+          echo "✅ APP_ENVIRONMENT: $APP_ENVIRONMENT"
 
       - name: Disable Next.js telemetry
         run: npx next telemetry disable
