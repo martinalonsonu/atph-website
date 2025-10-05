@@ -6,7 +6,7 @@ const nextConfig: NextConfig = {
     domains: ["atphdev.wordpress.com"],
     unoptimized: true,
   },
-  basePath: "/",
+  basePath: "/atph-website",
   assetPrefix: "/",
 };
 
