@@ -20,7 +20,7 @@ jobs:
     environment: production # 👈 esto asegura que use el environment "production"
     env:
       API_BASE: ${{ vars.API_BASE }}
-      WORDPRESS_API_URL: ${{ vars.WORDPRESS_API_URL }}
+      NODE_ENV: ${{ vars.NODE_ENV }}
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
@@ -66,7 +66,7 @@ jobs:
       - name: Check env vars
         run: |
           echo "API_BASE: $API_BASE"
-          echo "WORDPRESS_API_URL: $WORDPRESS_API_URL"
+          echo "NODE_ENV: $NODE_ENV"
 
       - name: Build project
         run: ${{ steps.detect-package-manager.outputs.runner }} next build

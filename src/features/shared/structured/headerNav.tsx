@@ -47,12 +47,12 @@ const HeaderNav = () => {
               <ul className="space-x-6 hidden lg:flex">
                 {HEADER_NAV_INFORMATION.map((item, index) => (
                   <li key={index}>
-                    <a
+                    <Link
                       href={item.link}
                       className="text-[#8b0000] hover:text-[#cca21c] font-mulish uppercase transition-all duration-200 hover:underline underline-offset-4 text-sm lg:text-base"
                     >
                       {item.title}
-                    </a>
+                    </Link>
                   </li>
                 ))}
               </ul>
@@ -124,13 +124,13 @@ const HeaderNav = () => {
           <ul className="flex flex-col space-y-4 p-4">
             {HEADER_NAV_INFORMATION.map((item, index) => (
               <li key={index}>
-                <a
+                <Link
                   href={item.link}
                   className="text-[#8b0000] hover:text-[#cca21c] font-mulish uppercase transition-all duration-200 hover:underline underline-offset-4 text-sm"
                   onClick={() => setOpen(false)}
                 >
                   {item.title}
-                </a>
+                </Link>
               </li>
             ))}
           </ul>
