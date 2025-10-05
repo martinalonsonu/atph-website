@@ -48,7 +48,7 @@ const HeroSection = () => {
           </p>
           <Image
             priority
-            src="/assets/atph-logo2.png"
+            src="./assets/atph-logo2.png"
             alt="A Tus Pies Humilde"
             width={750}
             height={750}

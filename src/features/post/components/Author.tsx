@@ -14,7 +14,7 @@ const Author = ({ authorId }: { authorId: number }) => {
       {/* Perfil */}
       <div className="flex items-center gap-4 lg:gap-2 mb-4">
         <Image
-          src={author.avatar || "/assets/logo-atph.png"}
+          src={author.avatar || "./assets/logo-atph.png"}
           alt="Autor"
           width={60}
           height={60}
