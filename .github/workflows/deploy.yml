@@ -18,8 +18,8 @@ jobs:
   build:
     runs-on: ubuntu-latest
     env:
-      API_BASE: ${{ secrets.API_BASE }}
-      WORDPRESS_API_URL: ${{ secrets.WORDPRESS_API_URL }}
+      API_BASE: ${{ vars.API_BASE }}
+      WORDPRESS_API_URL: ${{ vars.WORDPRESS_API_URL }}
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
