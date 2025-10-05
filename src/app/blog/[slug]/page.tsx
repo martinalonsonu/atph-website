@@ -1,7 +1,14 @@
 import PostPage from "@/features/post";
 import { formatAuthor, formatCategory } from "@/utils/helpers";
 import { Metadata } from "next";
-import { getPostBySlug } from "@/lib/actions";
+import { getPostBySlug, getAllPostSlugs } from "@/lib/actions";
+
+export async function generateStaticParams() {
+  const slugs = await getAllPostSlugs();
+  return slugs.map((slug) => ({
+    slug: slug,
+  }));
+}
 
 export async function generateMetadata({
   params,
