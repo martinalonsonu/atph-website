@@ -14,13 +14,12 @@ concurrency:
   group: "pages"
   cancel-in-progress: false
 
-env:
-  API_BASE: ${{ secrets.API_BASE }}
-  WORDPRESS_API_URL: ${{ secrets.WORDPRESS_API_URL }}
-
 jobs:
   build:
     runs-on: ubuntu-latest
+    env:
+      API_BASE: ${{ secrets.API_BASE }}
+      WORDPRESS_API_URL: ${{ secrets.WORDPRESS_API_URL }}
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
@@ -63,10 +62,12 @@ jobs:
       - name: Install dependencies
         run: ${{ steps.detect-package-manager.outputs.manager }} ${{ steps.detect-package-manager.outputs.command }}
 
+      - name: Check env vars
+        run: |
+          echo "API_BASE: $API_BASE"
+          echo "WORDPRESS_API_URL: $WORDPRESS_API_URL"
+
       - name: Build project
-        env:
-          API_BASE: ${{ secrets.API_BASE }}
-          WORDPRESS_API_URL: ${{ secrets.WORDPRESS_API_URL }}
         run: ${{ steps.detect-package-manager.outputs.runner }} next build && ${{ steps.detect-package-manager.outputs.runner }} next export
 
       - name: Upload artifact

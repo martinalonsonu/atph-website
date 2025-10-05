@@ -1,4 +1,3 @@
-"use server";
 import { Post } from "./interface";
 
 export const getAllPostSlugs = async (): Promise<string[]> => {
