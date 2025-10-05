@@ -13,7 +13,7 @@ const SpinnerPageLoad = () => {
   return (
     <div className="bg-[#fff8f5] spinner-content gap-5 flex flex-col justify-center items-center">
       <Image
-        src="./assets/logo-atph.png"
+        src="https://atphdev.wordpress.com/wp-content/uploads/2025/10/logo-atph.png"
         alt="Profile"
         width={100}
         height={100}

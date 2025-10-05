@@ -39,7 +39,10 @@ const Heading: FC<HeadingProps> = ({
       <div className="flex flex-wrap justify-center items-center gap-2 lg:gap-6 text-sm text-gray-700 mb-6">
         <div className="flex gap-2 items-center">
           <Image
-            src={formatAuthor(author).avatar || "./assets/logo-atph.png"}
+            src={
+              formatAuthor(author).avatar ||
+              "https://atphdev.wordpress.com/wp-content/uploads/2025/10/logo-atph.png"
+            }
             width={25}
             height={25}
             alt={formatAuthor(author).name}

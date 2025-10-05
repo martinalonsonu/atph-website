@@ -12,7 +12,7 @@ export default function ProfileCard() {
       {/* Imagen de perfil */}
       <div className="flex justify-center -mt-14">
         <Image
-          src="./assets/logo-atph.png"
+          src="https://atphdev.wordpress.com/wp-content/uploads/2025/10/logo-atph.png"
           alt="Profile"
           width={100}
           height={100}

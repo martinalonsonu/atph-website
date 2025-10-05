@@ -36,7 +36,7 @@ const HeaderNav = () => {
             <div className="w-full flex justify-between items-center space-x-4">
               <Link href="/" className="text-lg font-bold">
                 <Image
-                  src="./assets/logo-atph.png"
+                  src="https://atphdev.wordpress.com/wp-content/uploads/2025/10/logo-atph.png"
                   alt="Logo"
                   width={isScrolled ? 70 : 50}
                   height={isScrolled ? 70 : 50}
