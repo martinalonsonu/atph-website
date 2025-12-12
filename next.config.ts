@@ -8,7 +8,7 @@ const nextConfig: NextConfig = {
     domains: ["atphdev.wordpress.com"],
     unoptimized: true,
   },
-  basePath: isProd ? "/atph-website" : "",
+  basePath: "",
   assetPrefix: "",
 };
 
