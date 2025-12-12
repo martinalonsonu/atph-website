@@ -9,7 +9,7 @@ const nextConfig: NextConfig = {
     unoptimized: true,
   },
   basePath: isProd ? "/atph-website" : "",
-  assetPrefix: isProd ? "/atph-website/" : "",
+  assetPrefix: "",
 };
 
 export default nextConfig;
