@@ -1,6 +1,6 @@
 export const HEADER_NAV_INFORMATION = [
-  { title: "Nosotros", link: "/#nosotros" },
-  { title: "Servicios", link: "/#servicios" },
+  { title: "Nosotros", link: "/nosotros" },
+  { title: "Servicios", link: "/#services" },
   { title: "Blog", link: "/blog" },
   { title: "Contacto", link: "/contacto" },
 ];
@@ -92,3 +92,26 @@ export const CONTACT_MODEL = {
     whatsapp: "https://wa.me/51999999999",
   },
 };
+
+export const TEAM_MEMBERS = [
+  {
+    name: "Juan Pérez",
+    role: "Director General",
+    image: "/images/team/member-1.jpg",
+  },
+  {
+    name: "María López",
+    role: "Coordinación de Contenidos",
+    image: "/images/team/member-2.jpg",
+  },
+  {
+    name: "Carlos Ramírez",
+    role: "Producción Audiovisual",
+    image: "/images/team/member-3.jpg",
+  },
+  {
+    name: "Ana Torres",
+    role: "Diseño y Comunicación",
+    image: "/images/team/member-4.jpg",
+  },
+];

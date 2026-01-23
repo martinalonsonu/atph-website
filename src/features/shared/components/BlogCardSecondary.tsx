@@ -9,47 +9,63 @@ export default function BlogCardSecondary({ post }: { post: Post }) {
   return (
     <Link
       href={`/blog/${post.slug}`}
-      className="bg-white rounded-t-2xl overflow-hidden shadow-md hover:shadow-lg transition flex flex-col hover:scale-102"
+      className="group bg-white rounded-2xl overflow-hidden border border-[#ffe0d0] shadow-md hover:shadow-xl transition-all duration-300 flex flex-col"
     >
-      <Image
-        src={post.jetpack_featured_media_url || ""}
-        alt={stripHtml(post.title.rendered)}
-        width={400}
-        height={200}
-        className="w-full h-[200px] object-cover"
-        quality={75}
-      />
-      <div className="p-4 flex flex-col gap-2">
-        {/* Etiquetas */}
-        <div className="flex gap-2 text-xs">
+      {/* Imagen */}
+      <div className="relative overflow-hidden">
+        <Image
+          src={post.jetpack_featured_media_url || ""}
+          alt={stripHtml(post.title.rendered)}
+          width={400}
+          height={220}
+          className="w-full h-[220px] object-cover group-hover:scale-105 transition-transform duration-500"
+          quality={75}
+        />
+
+        {/* overlay suave */}
+        <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
+      </div>
+
+      {/* Contenido */}
+      <div className="p-5 flex flex-col gap-3 flex-1">
+        {/* Autor + badge */}
+        <div className="flex items-center gap-2 text-xs">
           <Image
             src={formatAuthor(post.author).avatar}
-            width={25}
-            height={25}
+            width={26}
+            height={26}
             alt={formatAuthor(post.author).name}
-            className="rounded-full hover:scale-105 transition"
+            className="rounded-full"
             loading="lazy"
-            quality={75}
           />
+          <span className="text-[#555] font-mulish">
+            {formatAuthor(post.author).name}
+          </span>
           <Badge categoryId={post.categories[0]} tagId={post.tags[0]} />
         </div>
 
         {/* Título */}
         <Title type="tertiary" title={stripHtml(post.title.rendered)} />
 
-        {/* Descripción */}
-        <p className="text-sm text-gray-700 line-clamp-2">
+        {/* Extracto */}
+        <p className="text-sm text-[#555] font-mulish leading-relaxed line-clamp-3">
           {stripHtml(post?.excerpt?.rendered || "")}
         </p>
 
-        {/* Fecha */}
-        <span className="text-xs text-gray-500 mt-2">
-          {new Date(post.date).toLocaleDateString("es-PE", {
-            day: "2-digit",
-            month: "short",
-            year: "numeric",
-          })}
-        </span>
+        {/* Footer */}
+        <div className="mt-auto pt-3 flex items-center justify-between text-xs text-[#777]">
+          <span>
+            {new Date(post.date).toLocaleDateString("es-PE", {
+              day: "2-digit",
+              month: "short",
+              year: "numeric",
+            })}
+          </span>
+
+          <span className="text-[#8b0000] font-semibold group-hover:underline">
+            Leer →
+          </span>
+        </div>
       </div>
     </Link>
   );

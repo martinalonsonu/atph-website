@@ -1,35 +1,32 @@
 import React from "react";
 
 import Wrapper from "@/features/shared/layout/wrapper";
-import Image from "next/image";
-import { ABOUT_MODEL } from "@/utils/models";
-import Title from "@/features/home/components/title";
+
 const HeroSection = () => {
   return (
-    <section className="w-full relative py-6 lg:py-20" id="about">
+    <section className="relative w-full bg-gradient-to-br from-[#fff8f5] via-[#fffcf9] to-[#fff3ed] overflow-hidden">
+      {/* decorativos */}
+      <div className="absolute inset-0 pointer-events-none">
+        <div className="absolute -top-40 -left-40 w-96 h-96 bg-[#8b0000]/10 rounded-full blur-3xl" />
+        <div className="absolute -bottom-40 -right-40 w-96 h-96 bg-[#cca21c]/10 rounded-full blur-3xl" />
+      </div>
+
       <Wrapper>
-        <div className="w-full gap-5 relative flex flex-col items-center lg:flex-row px-4 lg:px-0">
-          <div className="lg:max-w-[50%] w-full gap-2.5 xl:ml-24 flex flex-col lg:gap-5 items-start">
-            <Image
-              src={ABOUT_MODEL.image}
-              alt={ABOUT_MODEL.alt}
-              width={500}
-              height={600}
-              className="w-full lg:w-[500px] h-[300px] lg:h-[550px] object-cover rounded-br-4xl rounded-tl-4xl rotate-y-180"
-              loading="lazy"
-              quality={75}
-            />
-          </div>
-          <div className="lg:max-w-[50%] w-full">
-            <Title
-              type="primary"
-              title={ABOUT_MODEL.title}
-              subtitle={ABOUT_MODEL.tooltip}
-            />
-            <p className="w-full text-[15px] lg:max-w-[500px] sm:text-2xl font-mulish">
-              {ABOUT_MODEL.description}
-            </p>
-          </div>
+        <div className="relative z-10 py-16 md:py-24 flex flex-col items-center text-center">
+          <p className="text-xs sm:text-sm md:text-base font-bold tracking-widest text-[#cca21c] uppercase mb-3">
+            Nuestra Historia
+          </p>
+
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-cinzel font-bold text-[#8b0000] mb-6">
+            A Tus Pies, <br />
+            <span className="text-[#cca21c]">Humilde</span>
+          </h1>
+
+          <p className="max-w-2xl text-sm sm:text-base md:text-lg font-mulish text-[#555] leading-relaxed">
+            Somos un proyecto que nace desde la fe, el servicio y la convicción
+            de que la evangelización también puede vivirse con calidad,
+            creatividad y compromiso en el mundo digital.
+          </p>
         </div>
       </Wrapper>
     </section>
