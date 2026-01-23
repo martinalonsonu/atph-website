@@ -1,59 +1,153 @@
 "use client";
 
-// import useScroller from "@/hooks/useScroller";
 import React from "react";
-import { HERO_INFORMATION } from "@/utils/models";
 import Image from "next/image";
+import { HERO_INFORMATION } from "@/utils/models";
 
 const HeroSection = () => {
-  // const { currentItem } = useScroller(HERO_INFORMATION);
   return (
-    <section className="w-full h-auto lg:h-[720px] flex flex-col lg:flex-row bg-[#fff8f5]">
-      <div className="lg:w-[33%] h-full">
-        <Image
-          // src={currentItem.image}
-          src={HERO_INFORMATION[0].image}
-          className="hidden lg:block w-full h-[285px] lg:h-full object-cover"
-          // alt={currentItem.alt}
-          alt={HERO_INFORMATION[0].alt}
-          width={419}
-          height={720}
-          priority
-          quality={75}
-          fetchPriority="high"
-        />
-        <Image
-          src={HERO_INFORMATION[0].imageMobile}
-          className="block lg:hidden w-full h-[285px] lg:h-full object-cover"
-          alt={HERO_INFORMATION[0].alt}
-          width={400}
-          height={285}
-          priority
-          quality={75}
-          fetchPriority="high"
-        />
+    <section
+      className="
+        w-full
+        relative
+        overflow-hidden
+        bg-gradient-to-br from-[#fff8f5] via-[#fffcf9] to-[#fff3ed]
+        flex flex-col
+        lg:grid lg:grid-cols-2
+        lg:min-h-[85vh]
+      "
+    >
+      {/* Decorativos de fondo */}
+      <div className="absolute inset-0 pointer-events-none">
+        <div className="absolute -top-40 -left-40 w-96 h-96 bg-[#8b0000]/10 rounded-full blur-3xl"></div>
+        <div className="absolute -bottom-40 -right-40 w-96 h-96 bg-[#cca21c]/10 rounded-full blur-3xl"></div>
       </div>
-      <div className="flex flex-col lg:w-[100%] flex-1">
-        <div className="w-full h-full flex flex-col px-4 py-6 sm:py-14 sm:pl-24 justify-center gap-8 relative overflow-hidden">
-          <h1 className="text-3xl sm:text-[78px] sm:leading-[60px] z-10 text-[#cca21c] font-cinzel">
-            A TUS PIES <br />
-            <span className="text-4xl sm:text-[86px] text-[#8b0000] font-bold">
-              HUMILDE
-            </span>
-          </h1>
-          <p className="text-[15px] sm:text-2xl max-w-[280px] sm:max-w-[520px] font-mulish">
-            Nacimos del deseo sincero de servir a Dios y de poner nuestros dones
-            al servicio de los demás. Inspirados por nuestra fe, decidimos
-            llevar nuestras devociones a través del mundo digital.
-          </p>
+
+      {/* Contenido */}
+      <div
+        className="
+          flex flex-col justify-center items-start
+          px-4 sm:px-8 md:px-12 lg:px-16
+          py-10 lg:py-0
+          relative z-10
+          order-2 lg:order-1
+        "
+      >
+        {/* Línea decorativa */}
+        <div className="h-1 w-16 sm:w-20 bg-gradient-to-r from-[#8b0000] to-[#cca21c] mb-4 sm:mb-6 rounded-full" />
+
+        {/* Subtítulo */}
+        <p className="text-xs sm:text-sm md:text-base font-bold tracking-widest text-[#cca21c] uppercase mb-2 sm:mb-4">
+          Bienvenidos a...
+        </p>
+
+        {/* Título */}
+        <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-cinzel font-bold leading-tight mb-4 sm:mb-6 text-[#8b0000]">
+          A TUS PIES
+          <br />
+          <span className="text-[#cca21c] text-4xl sm:text-5xl md:text-6xl lg:text-7xl">
+            HUMILDE
+          </span>
+        </h1>
+
+        {/* Descripción */}
+        <p className="text-sm sm:text-base md:text-lg font-mulish text-[#555] max-w-xs sm:max-w-md leading-relaxed mb-6 sm:mb-8">
+          Nacimos del deseo sincero de servir a Dios y poner nuestros dones al
+          servicio de los demás. Inspirados por nuestra fe, llevamos la devoción
+          y la tradición al mundo digital.
+        </p>
+
+        {/* CTA */}
+        <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 w-full sm:w-auto">
+          <a
+            href="#services"
+            className="
+              inline-flex items-center justify-center
+              px-6 sm:px-8 py-3 sm:py-4
+              bg-[#8b0000] text-white
+              font-semibold text-sm sm:text-base
+              rounded-xl
+              hover:bg-[#a01010]
+              transition-all duration-300
+              hover:shadow-xl hover:scale-105
+            "
+          >
+            Conoce Nuestros Servicios
+          </a>
+          <a
+            href="#contact"
+            className="
+              inline-flex items-center justify-center
+              px-6 sm:px-8 py-3 sm:py-4
+              border-2 border-[#8b0000]
+              text-[#8b0000]
+              font-semibold text-sm sm:text-base
+              rounded-xl
+              hover:bg-[#8b0000] hover:text-white
+              transition-all duration-300
+            "
+          >
+            Contáctanos
+          </a>
+        </div>
+      </div>
+
+      {/* Imagen */}
+      <div
+        className="
+          relative
+          h-64 sm:h-80 md:h-[650px]
+          overflow-hidden
+          order-1 lg:order-2
+        "
+      >
+        <div className="relative group">
           <Image
+            src={HERO_INFORMATION[0].image}
+            alt={HERO_INFORMATION[0].alt}
+            width={600}
+            height={800}
             priority
-            src="./assets/atph-logo2.png"
-            alt="A Tus Pies Humilde"
-            width={750}
-            height={750}
-            className="w-[300px] sm:w-[450px] right-[-40%] sm:right-[-15%] absolute lg:w-[650px] lg:right-[-30%] opacity-20"
+            quality={85}
+            fetchPriority="high"
+            className="
+              hidden lg:block
+              w-full h-full
+              object-cover object-center
+              transition-transform duration-700
+              group-hover:scale-105
+            "
           />
+
+          <Image
+            src={HERO_INFORMATION[0].imageMobile}
+            alt={HERO_INFORMATION[0].alt}
+            width={400}
+            height={480}
+            priority
+            quality={85}
+            fetchPriority="high"
+            className="
+              block lg:hidden
+              w-full h-full
+              object-cover
+              transition-transform duration-700
+              group-hover:scale-105
+            "
+          />
+
+          {/* Overlay */}
+          <div className="absolute inset-0 bg-gradient-to-r from-[#fff8f5] via-transparent to-transparent lg:from-[#fff8f5]/40" />
+
+          {/* Badge */}
+          <div className="absolute bottom-6 left-6 right-6 bg-white/90 backdrop-blur-md rounded-xl p-4 shadow-lg">
+            <p className="text-sm font-semibold text-[#8b0000] font-cinzel tracking-wide">
+              ✨ A Sus Pies
+            </p>
+            <p className="text-xs text-[#666] font-mulish mt-1 leading-relaxed">
+              Para servir con fe y humildad
+            </p>
+          </div>
         </div>
       </div>
     </section>
