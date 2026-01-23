@@ -1,4 +1,5 @@
 import AboutSection from "./sections/AboutSection";
+import ContactSection from "./sections/ContactSection";
 import Footer from "../shared/structured/footer";
 import HeaderNav from "../shared/structured/headerNav";
 import HeroSection from "./sections/HeroSection";
@@ -16,6 +17,7 @@ export default function Home() {
         <ServicesSection />
         <BlogSection />
         <SocialsSection />
+        <ContactSection />
       </main>
       <Footer />
     </div>

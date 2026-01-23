@@ -7,7 +7,7 @@ import Button from "@/features/shared/components/Button";
 import Title from "../components/title";
 const AboutSection = () => {
   return (
-    <section className="w-full bg-[#fefefe] relative py-6 lg:py-20">
+    <section className="w-full bg-[#fefefe] relative py-6 lg:py-20" id="about">
       <Wrapper>
         <div className="w-full gap-5 relative flex flex-col items-center lg:flex-row px-4 lg:px-0">
           <div className="lg:max-w-[50%] w-full gap-2.5 xl:ml-24 flex flex-col lg:gap-5 items-start">

@@ -19,7 +19,7 @@ const BlogSection = async () => {
   const [mainPost, ...otherPosts] = posts;
 
   return (
-    <section className="w-full bg-[#fefefe] py-12 lg:py-20">
+    <section className="w-full bg-[#fefefe] py-12 lg:py-20" id="blog">
       <div className="w-full max-w-[1200px] mx-auto px-4 lg:px-14">
         <div className="flex justify-between items-center mb-8">
           <Title type="secondary" title="Últimas publicaciones" />

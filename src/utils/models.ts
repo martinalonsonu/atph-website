@@ -1,8 +1,8 @@
 export const HEADER_NAV_INFORMATION = [
-  { title: "Nosotros", link: "/about" },
-  { title: "Servicios", link: "/services" },
+  { title: "Nosotros", link: "/nosotros" },
+  { title: "Servicios", link: "/servicios" },
   { title: "Blog", link: "/blog" },
-  { title: "Contacto", link: "/contact" },
+  { title: "Contacto", link: "/contacto" },
 ];
 
 export const HERO_INFORMATION = [
@@ -72,4 +72,23 @@ export const ABOUT_MODEL = {
     "https://atphdev.wordpress.com/wp-content/uploads/2025/08/about-desktop.jpg",
   alt: "A Tus Pies Humilde",
   redirectLink: "/about",
+};
+
+export const CONTACT_MODEL = {
+  title: "PONTE EN CONTACTO",
+  tooltip: "¿TIENES ALGUNA PREGUNTA?",
+  description:
+    "¿Deseas solicitar nuestros servicios o tienes alguna consulta? No dudes en escribirnos. Nos encantaría saber de ti y estamos aquí para ayudarte.",
+  email: "info@atuspieshumilde.com",
+  phone: "+51 123 456 789",
+  locations: [
+    {
+      city: "Lima, Perú",
+      address: "Jr. Principal 123",
+    },
+  ],
+  social: {
+    facebook: "https://www.facebook.com/ATusPiesHumilde",
+    whatsapp: "https://wa.me/51999999999",
+  },
 };
