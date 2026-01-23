@@ -1,6 +1,6 @@
 export const HEADER_NAV_INFORMATION = [
-  { title: "Nosotros", link: "/nosotros" },
-  { title: "Servicios", link: "/servicios" },
+  { title: "Nosotros", link: "/#nosotros" },
+  { title: "Servicios", link: "/#servicios" },
   { title: "Blog", link: "/blog" },
   { title: "Contacto", link: "/contacto" },
 ];
@@ -42,7 +42,7 @@ export const SERVICES_MODEL = {
       alt: "Portada",
       title: "Coberturas Especiales",
       description:
-        "Realizamos coberturas y transmisiones en vivo de eventos religiosos y culturales a través de nuestras plataformas digitales. Nos especializamos en la transmisión de misas, procesiones y celebraciones especiales, brindando una experiencia visual de alta calidad.",
+        "Realizamos coberturas y transmisiones en vivo de eventos religiosos y culturales a través de nuestras plataformas digitales. Nos especializamos en misas, procesiones y celebraciones especiales, ofreciendo una experiencia visual profesional y de alta calidad.",
     },
     {
       image:
@@ -50,15 +50,15 @@ export const SERVICES_MODEL = {
       alt: "Portada",
       title: "Alfombras",
       description:
-        "Nos especializamos en el diseño y elaboración de alfombras artísticas utilizando aserrín y viruta teñida. Estas creaciones, llenas de color y simbolismo, son ideales para celebraciones religiosas y procesiones. Cada alfombra es realizada con dedicación y detalle, reflejando la riqueza de nuestras tradiciones.",
+        "Diseñamos y elaboramos alfombras artísticas con aserrín y viruta teñida, llenas de color y simbolismo. Cada creación es hecha con dedicación y detalle, ideales para celebraciones religiosas y procesiones que resaltan nuestra tradición.",
     },
     {
       image:
         "https://atphdev.wordpress.com/wp-content/uploads/2025/08/services-3-1.png",
       alt: "Portada",
-      title: "Eventos Religiosos",
+      title: "Complementos",
       description:
-        "El mejor realce para tu homenaje, guardada y más con nuestro servicios: Luces led, lanza confeti, chisperos, exornos florales y más.",
+        "Realzamos tus homenajes y celebraciones con servicios especiales como luces LED, lanza confeti, chisperos, exornos florales y más. Brindamos un acompañamiento visual que eleva cada momento con solemnidad y belleza.",
     },
   ],
 };
@@ -67,7 +67,7 @@ export const ABOUT_MODEL = {
   title: "¿QUIÉNES SOMOS?",
   tooltip: "ACERCA DE NOSOTROS",
   description:
-    "Nuestra historia inicia en el corazón amoroso del Señor de Humildad y Paciencia. Inspirados por esta devoción, surgió la idea de crear A Tus Pies Humilde, con la misión de compartir esta devoción con el mundo...",
+    "Nuestra historia inicia en el corazón amoroso del Señor de Humildad y Paciencia. Inspirados por esta profunda devoción, nace A Tus Pies Humilde, con la misión de compartir y preservar la fe, llevando nuestras tradiciones religiosas a más personas a través del servicio y los medios digitales.",
   image:
     "https://atphdev.wordpress.com/wp-content/uploads/2025/08/about-desktop.jpg",
   alt: "A Tus Pies Humilde",

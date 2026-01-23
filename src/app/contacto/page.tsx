@@ -1,4 +1,4 @@
-import AboutPage from "@/features/about";
+import ContactPage from "@/features/contact";
 import { Metadata } from "next";
 import React from "react";
 
@@ -29,8 +29,8 @@ export const metadata: Metadata = {
   },
 };
 
-const About = () => {
-  return <AboutPage />;
+const Contact = () => {
+  return <ContactPage />;
 };
 
-export default About;
+export default Contact;

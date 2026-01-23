@@ -1,44 +1,56 @@
 import React from "react";
 import CardService from "../components/cards/ServiceCard";
-
+import Wrapper from "@/features/shared/layout/wrapper";
 import { SERVICES_MODEL } from "@/utils/models";
-import Title from "../components/title";
 
 const ServicesSection = () => {
   return (
-    <section className="w-full bg-[#fff8f5] relative" id="services">
-      <div className="w-full sm:gap-10 sm:max-w-[1000px] xl:max-w-[1200px] flex flex-col xl:gap-0 lg:flex-row mx-auto justify-center items-center py-6 px-4 lg:px-0 lg:py-20">
-        <div className="w-full flex flex-col items-center lg:w-[50%] relative">
-          <div className="w-full mb-9 xl:ml-24">
-            <Title
-              type="primary"
-              title={SERVICES_MODEL.title}
-              subtitle={SERVICES_MODEL.title}
-            />
-          </div>
-          <CardService
-            image={SERVICES_MODEL.coverages[0].image}
-            alt={SERVICES_MODEL.coverages[0].alt}
-            title={SERVICES_MODEL.coverages[0].title}
-            description={SERVICES_MODEL.coverages[0].description}
-          />
-          {/* <img src="/assets/logo-atph-letras.png" alt="A Tus Pies Humilde"  className='w-[200px] sm:w-[250px] left-[-40%] sm:left-[-15%] bottom-[-245px] absolute lg:w-[450px] lg:left-[-30%] opacity-15'/> */}
+    <section
+      className="w-full bg-gradient-to-b from-[#] to-[#ffe8e0] relative py-8 md:py-10"
+      id="services"
+    >
+      <Wrapper>
+        {/* Encabezado de sección */}
+        <div className="flex flex-col items-center text-center mb-10 sm:mb-14">
+          <p className="text-xs sm:text-sm md:text-base font-bold tracking-widest text-[#cca21c] uppercase mb-2 sm:mb-3 md:mb-4">
+            Lo Que Ofrecemos
+          </p>
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-6xl font-cinzel font-bold text-[#8b0000] mb-3 sm:mb-4">
+            Nuestros Servicios
+          </h2>
+          <div className="h-1 w-16 sm:w-18 md:w-20 bg-gradient-to-r from-[#8b0000] to-[#cca21c] rounded-full mb-4 sm:mb-5 md:mb-6"></div>
+          <p className="text-sm sm:text-base md:text-lg text-[#666] font-mulish max-w-2xl px-4">
+            Servicios especializados para hacer tu evento memorable
+          </p>
         </div>
-        <div className="w-full lg:w-[50%] flex flex-col items-center mt-10 sm:mt-0 gap-9 lg:gap-24">
-          <CardService
-            image={SERVICES_MODEL.coverages[1].image}
-            alt={SERVICES_MODEL.coverages[1].alt}
-            title={SERVICES_MODEL.coverages[1].title}
-            description={SERVICES_MODEL.coverages[1].description}
-          />
-          <CardService
-            image={SERVICES_MODEL.coverages[2].image}
-            alt={SERVICES_MODEL.coverages[2].alt}
-            title={SERVICES_MODEL.coverages[2].title}
-            description={SERVICES_MODEL.coverages[2].description}
-          />
+
+        {/* Grid de servicios */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6 md:gap-8 lg:gap-10">
+          {SERVICES_MODEL.coverages.map((service, index) => (
+            <div key={index} className="group relative h-full">
+              {/* Línea decorativa superior */}
+              <div className="absolute -top-4 left-0 right-0 h-1 bg-gradient-to-r from-[#8b0000] via-[#cca21c] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+
+              <CardService
+                image={service.image}
+                alt={service.alt}
+                title={service.title}
+                description={service.description}
+              />
+            </div>
+          ))}
         </div>
-      </div>
+
+        {/* CTA final */}
+        <div className="flex justify-center mt-12 sm:mt-14 md:mt-16 lg:mt-20">
+          <a
+            href="#contact"
+            className="inline-flex items-center justify-center px-6 sm:px-8 md:px-10 py-3 sm:py-4 bg-[#8b0000] text-white font-semibold text-sm sm:text-base rounded-xl hover:bg-[#a01010] transition-all duration-300 hover:shadow-xl hover:scale-105"
+          >
+            Solicita un presupuesto
+          </a>
+        </div>
+      </Wrapper>
     </section>
   );
 };
