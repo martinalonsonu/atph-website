@@ -2,6 +2,7 @@ import React from "react";
 import CardService from "../components/cards/ServiceCard";
 import Wrapper from "@/features/shared/layout/wrapper";
 import { SERVICES_MODEL } from "@/utils/models";
+import Link from "next/link";
 
 const ServicesSection = () => {
   return (
@@ -43,12 +44,12 @@ const ServicesSection = () => {
 
         {/* CTA final */}
         <div className="flex justify-center mt-12 sm:mt-14 md:mt-16 lg:mt-20">
-          <a
-            href="#contact"
+          <Link
+            href="/contacto"
             className="inline-flex items-center justify-center px-6 sm:px-8 md:px-10 py-3 sm:py-4 bg-[#8b0000] text-white font-semibold text-sm sm:text-base rounded-xl hover:bg-[#a01010] transition-all duration-300 hover:shadow-xl hover:scale-105"
           >
             Solicita un presupuesto
-          </a>
+          </Link>
         </div>
       </Wrapper>
     </section>

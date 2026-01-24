@@ -3,6 +3,7 @@
 import React from "react";
 import Image from "next/image";
 import { HERO_INFORMATION } from "@/utils/models";
+import Link from "next/link";
 
 const HeroSection = () => {
   return (
@@ -59,7 +60,7 @@ const HeroSection = () => {
 
         {/* CTA */}
         <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 w-full sm:w-auto">
-          <a
+          <Link
             href="#services"
             className="
               inline-flex items-center justify-center
@@ -73,9 +74,9 @@ const HeroSection = () => {
             "
           >
             Conoce Nuestros Servicios
-          </a>
-          <a
-            href="#contact"
+          </Link>
+          <Link
+            href="/contacto"
             className="
               inline-flex items-center justify-center
               px-6 sm:px-8 py-3 sm:py-4
@@ -88,7 +89,7 @@ const HeroSection = () => {
             "
           >
             Contáctanos
-          </a>
+          </Link>
         </div>
       </div>
 

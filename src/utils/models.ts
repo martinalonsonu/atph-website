@@ -71,7 +71,7 @@ export const ABOUT_MODEL = {
   image:
     "https://atphdev.wordpress.com/wp-content/uploads/2025/08/about-desktop.jpg",
   alt: "A Tus Pies Humilde",
-  redirectLink: "/about",
+  redirectLink: "/nosotros",
 };
 
 export const CONTACT_MODEL = {

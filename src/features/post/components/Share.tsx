@@ -9,7 +9,7 @@ import {
 
 const Share = ({ slug, isDesktop }: { slug: string; isDesktop: boolean }) => {
   const baseUrl =
-    process.env.NEXT_PUBLIC_URL || "http://atph-test.netlify.app/";
+    process.env.NEXT_PUBLIC_URL || "https://www.atuspieshumilde.com/";
   const fullUrl = `${baseUrl}blog/${slug}`;
 
   return (
