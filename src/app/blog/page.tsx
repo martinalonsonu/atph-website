@@ -3,7 +3,7 @@ import { Metadata } from "next";
 import React from "react";
 
 const CANONICAL_URL =
-  process.env.NEXT_PUBLIC_URL || "http://atph-test.netlify.app/";
+  process.env.NEXT_PUBLIC_URL || "https://www.atuspieshumilde.com/";
 
 export const metadata: Metadata = {
   title: "A Tus Pies Humilde | Blog",
@@ -12,7 +12,7 @@ export const metadata: Metadata = {
   keywords: ["blog", "artículos", "religión", "devoción", "#ATPH", "Iglesia"],
   openGraph: {
     type: "website",
-    url: `${CANONICAL_URL}blog` || "http://atph-test.netlify.app/blog",
+    url: `${CANONICAL_URL}blog` || "https://www.atuspieshumilde.com/blog",
     title: "A Tus Pies Humilde | Blog",
     description:
       "Lee las últimas publicaciones de #ATusPiesHumilde sobre nuestras devociones y la Iglesia.",
