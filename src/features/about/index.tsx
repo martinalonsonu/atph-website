@@ -2,17 +2,27 @@ import HeaderNav from "@/features/shared/structured/headerNav";
 import React from "react";
 import Footer from "../shared/structured/footer";
 import HeroSection from "./sections/HeroSection";
+import HistorySection from "./sections/HistorySection";
+import FoundationSection from "./sections/FoundationSection";
+import EssenceSection from "./sections/EssenceSection";
+import TeamSection from "./sections/TeamSection";
+import PresentSection from "./sections/PresentSection";
 
-const AboutPage = () => {
+const AboutPageIndex = () => {
   return (
     <div className="w-full flex flex-col bg-[#fff8f5]">
       <HeaderNav />
       <main className="w-full">
         <HeroSection />
+        <HistorySection />
+        <FoundationSection />
+        <EssenceSection />
+        <TeamSection />
+        <PresentSection />
       </main>
       <Footer />
     </div>
   );
 };
 
-export default AboutPage;
+export default AboutPageIndex;

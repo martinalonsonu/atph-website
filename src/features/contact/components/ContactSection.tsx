@@ -102,7 +102,7 @@ const ContactSection = () => {
 
   return (
     <section
-      className="w-full bg-[#fff8f5] relative py-6 lg:py-20"
+      className="w-full bg-gradient-to-br from-[#fff8f5] via-[#fffcf9] to-[#fff3ed] relative py-6 lg:py-20"
       id="contact"
     >
       <Wrapper>

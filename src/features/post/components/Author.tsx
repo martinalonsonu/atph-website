@@ -1,44 +1,35 @@
 import { formatAuthor } from "@/utils/helpers";
 import Image from "next/image";
-import React from "react";
 
-const Author = ({ authorId }: { authorId: number }) => {
+interface AuthorProps {
+  authorId: number;
+}
+
+const Author = ({ authorId }: AuthorProps) => {
   const author = formatAuthor(authorId);
-  return (
-    <div className="bg-white max-w-[384px] mx-auto rounded-t-2xl shadow-md p-4">
-      {/* Encabezado */}
-      <h2 className="text-sm font-semibold font-cinzel text-[#8B0000] mb-2">
-        Acerca del autor
-      </h2>
 
-      {/* Perfil */}
-      <div className="flex items-center gap-4 lg:gap-2 mb-4">
+  return (
+    <div className="bg-white rounded-2xl border border-[#ffe0d0] p-5 shadow-sm">
+      <h3 className="text-sm font-cinzel font-bold text-[#8b0000] mb-3">
+        Sobre el autor
+      </h3>
+
+      <div className="flex items-center gap-4 mb-4">
         <Image
-          src={
-            author.avatar ||
-            "https://atphdev.wordpress.com/wp-content/uploads/2025/10/logo-atph.png"
-          }
-          alt="Autor"
+          src={author.avatar}
+          alt={author.name}
           width={60}
           height={60}
-          className="rounded-full border border-gray-200 shadow-sm hover:scale-105 transition"
-          quality={75}
+          className="rounded-full"
         />
         <div>
-          <p className="font-bold text-lg whitespace-nowrap font-mulish text-gray-800">
-            {author.name}
-          </p>
-          <p className="text-[12px] font-mulish text-gray-500">
-            @{author.nick}
-          </p>
-          <p className="text-[10px] font-mulish text-gray-500">
-            {author.ocupation}
-          </p>
+          <p className="font-bold font-mulish text-[#333]">{author.name}</p>
+          <p className="text-xs text-[#777]">@{author.nick}</p>
+          <p className="text-xs text-[#777]">{author.ocupation}</p>
         </div>
       </div>
 
-      {/* Descripción */}
-      <p className="text-sm font-mulish text-left text-gray-600 leading-relaxed">
+      <p className="text-sm font-mulish text-[#555] leading-relaxed">
         {author.description}
       </p>
     </div>
