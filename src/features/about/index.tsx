@@ -7,6 +7,7 @@ import FoundationSection from "./sections/FoundationSection";
 import EssenceSection from "./sections/EssenceSection";
 import TeamSection from "./sections/TeamSection";
 import PresentSection from "./sections/PresentSection";
+import FounderMemorialSection from "./sections/FounderMemorial";
 
 const AboutPageIndex = () => {
   return (
@@ -16,6 +17,7 @@ const AboutPageIndex = () => {
         <HeroSection />
         <HistorySection />
         <FoundationSection />
+        <FounderMemorialSection />
         <EssenceSection />
         <TeamSection />
         <PresentSection />

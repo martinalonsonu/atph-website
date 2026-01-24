@@ -86,7 +86,8 @@ const AboutSection = () => {
                   Fe
                 </p>
                 <p className="text-xs sm:text-sm text-[#666] font-mulish mt-1 sm:mt-2">
-                  Como base de nuestro trabajo
+                  Creemos que todo servicio auténtico nace de una fe viva y
+                  comprometida.
                 </p>
               </div>
               <div className="bg-gradient-to-br from-[#fff8f5] to-[#ffe8e0] p-4 sm:p-5 md:p-6 rounded-lg sm:rounded-xl border border-[#ffe0d0] hover:border-[#8b0000] transition-colors">
@@ -94,7 +95,8 @@ const AboutSection = () => {
                   Servicio
                 </p>
                 <p className="text-xs sm:text-sm text-[#666] font-mulish mt-1 sm:mt-2">
-                  Al corazón de la gente
+                  Ponemos nuestros dones al servicio de Dios y de la comunidad,
+                  con humildad.
                 </p>
               </div>
             </div>
