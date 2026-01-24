@@ -18,7 +18,7 @@ const HeroSection = () => {
           </p>
 
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-cinzel font-bold text-[#8b0000] mb-6">
-            A Tus Pies, <br />
+            A Tus Pies <br />
             <span className="text-[#cca21c]">Humilde</span>
           </h1>
 

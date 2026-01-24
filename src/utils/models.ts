@@ -79,12 +79,12 @@ export const CONTACT_MODEL = {
   tooltip: "¿TIENES ALGUNA PREGUNTA?",
   description:
     "¿Deseas solicitar nuestros servicios o tienes alguna consulta? No dudes en escribirnos. Nos encantaría saber de ti y estamos aquí para ayudarte.",
-  email: "info@atuspieshumilde.com",
-  phone: "+51 123 456 789",
+  email: "info@info.com",
+  phone: "+51 999 999 999",
   locations: [
     {
-      city: "Lima, Perú",
-      address: "Jr. Principal 123",
+      city: "Huacho, Perú",
+      address: "",
     },
   ],
   social: {
@@ -95,23 +95,63 @@ export const CONTACT_MODEL = {
 
 export const TEAM_MEMBERS = [
   {
-    name: "Juan Pérez",
-    role: "Director General",
-    image: "/images/team/member-1.jpg",
+    name: "Jhon Medina Quineche",
+    role: "Dirección General",
+    image:
+      "https://atphdev.wordpress.com/wp-content/uploads/2026/01/whatsapp-image-2026-01-23-at-7.54.36-pm.jpeg",
   },
   {
-    name: "María López",
-    role: "Coordinación de Contenidos",
-    image: "/images/team/member-2.jpg",
+    name: "Juan Timaná González",
+    role: "Dirección artística",
+    image:
+      "https://atphdev.wordpress.com/wp-content/uploads/2026/01/whatsapp-image-2026-01-23-at-8.14.45-pm.jpeg",
   },
   {
-    name: "Carlos Ramírez",
-    role: "Producción Audiovisual",
-    image: "/images/team/member-3.jpg",
+    name: "Martin Nuñez Navarro",
+    role: "Dirección de comunicaciones y contenido",
+    image:
+      "https://atphdev.wordpress.com/wp-content/uploads/2026/01/img_0512.jpg",
   },
   {
-    name: "Ana Torres",
-    role: "Diseño y Comunicación",
-    image: "/images/team/member-4.jpg",
+    name: "Alexandra Rojas La Rosa",
+    role: "Audiovisuales",
+    image:
+      "https://atphdev.wordpress.com/wp-content/uploads/2026/01/whatsapp-image-2026-01-23-at-8.19.12-pm.jpeg",
+  },
+  {
+    name: "Said Fernández Borja",
+    role: "Audiovisuales",
+    image:
+      "https://atphdev.wordpress.com/wp-content/uploads/2026/01/whatsapp-image-2026-01-23-at-7.50.23-pm.jpeg",
+  },
+  {
+    name: "Silvana Zevallos Pineda",
+    role: "Audiovisuales",
+    image:
+      "https://atphdev.wordpress.com/wp-content/uploads/2026/01/whatsapp-image-2026-01-23-at-8.36.37-pm.jpeg",
+  },
+  {
+    name: "Renzo Aragón",
+    role: "Fotografía",
+    image:
+      "https://atphdev.wordpress.com/wp-content/uploads/2026/01/497928973_10237834364381950_2799838857230922552_n.jpg",
+  },
+  {
+    name: "Kevin Palomares Osorio",
+    role: "Audiovisuales",
+    image:
+      "https://atphdev.wordpress.com/wp-content/uploads/2026/01/73324318_2487543374857624_1933929382892535808_n.jpg",
+  },
+  {
+    name: "Elias Ramirez Junco",
+    role: "Audiovisuales",
+    image:
+      "https://atphdev.wordpress.com/wp-content/uploads/2026/01/captura-de-pantalla-2026-01-23-204717.png",
+  },
+  {
+    name: "Mayra Loyola Romero",
+    role: "Audiovisuales",
+    image:
+      "https://atphdev.wordpress.com/wp-content/uploads/2026/01/494524322_9812078118908127_6849873260355928596_n.jpg",
   },
 ];

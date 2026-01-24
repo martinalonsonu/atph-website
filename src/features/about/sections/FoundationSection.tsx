@@ -12,7 +12,7 @@ const FoundationSection = () => {
             <div className="absolute -inset-4 bg-gradient-to-br from-[#cca21c]/10 to-[#8b0000]/10 rounded-3xl blur-lg" />
             <div className="relative overflow-hidden rounded-2xl">
               <Image
-                src="/images/about-foundation.jpg"
+                src="https://atphdev.wordpress.com/wp-content/uploads/2026/01/whatsapp-image-2026-01-23-at-10.32.09-pm-1.jpeg"
                 alt="Fundación A Tus Pies Humilde"
                 width={600}
                 height={500}

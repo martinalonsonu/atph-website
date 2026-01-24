@@ -41,7 +41,7 @@ export default function TeamSlider() {
   };
 
   return (
-    <div className="relative w-full flex justify-center items-center overflow-hidden">
+    <div className="relative w-full flex justify-center items-center overflow-hidden p-5">
       <div className="relative flex items-center justify-center h-[300px] md:h-[250px]">
         {TEAM_MEMBERS.map((member, i) => {
           let offset = i - active;

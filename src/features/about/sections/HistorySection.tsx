@@ -38,7 +38,7 @@ const HistorySection = () => {
             <div className="absolute -inset-4 bg-gradient-to-br from-[#8b0000]/10 to-[#cca21c]/10 rounded-3xl blur-lg" />
             <div className="relative overflow-hidden rounded-2xl">
               <Image
-                src="/images/about-history.jpg"
+                src="https://atphdev.wordpress.com/wp-content/uploads/2026/01/whatsapp-image-2026-01-23-at-10.32.09-pm.jpeg"
                 alt="Historia A Tus Pies Humilde"
                 width={600}
                 height={500}
