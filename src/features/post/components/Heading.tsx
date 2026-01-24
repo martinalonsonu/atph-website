@@ -1,89 +1,76 @@
 import Image from "next/image";
-import React, { FC } from "react";
 import { formatAuthor, stripHtml } from "@/utils/helpers";
 import Share from "./Share";
 
-interface HeadingProps {
+export interface HeadingProps {
   title: string;
   subtitle: string;
   author: number;
   date: string;
-  image: string | undefined;
+  image?: string;
   loading: boolean;
   slug: string;
   timeReading: number;
 }
 
-const Heading: FC<HeadingProps> = ({
+const Heading = ({
   title,
   subtitle,
   author,
   date,
   image,
-  loading,
   slug,
   timeReading,
-}) => {
+}: HeadingProps) => {
   return (
     <>
-      {/* Title */}
-      <h1 className="text-2xl lg:text-4xl font-cinzel text-center text-[#8b0000] mb-3">
+      <h1 className="text-3xl sm:text-4xl md:text-5xl font-cinzel font-bold text-center text-[#8b0000] mb-4">
         {stripHtml(title)}
       </h1>
-      {/* Subtitle */}
-      <p className="text-center font-work text-gray-600 max-w-2xl mx-auto mb-6">
+
+      <p className="text-center font-mulish text-[#555] max-w-2xl mx-auto mb-6">
         {stripHtml(subtitle)}
       </p>
 
-      {/* Info row */}
-      <div className="flex flex-wrap justify-center items-center gap-2 lg:gap-6 text-sm text-gray-700 mb-6">
-        <div className="flex gap-2 items-center">
+      <div className="flex flex-wrap justify-center items-center gap-4 text-sm text-[#666] mb-6">
+        <div className="flex items-center gap-2">
           <Image
-            src={
-              formatAuthor(author).avatar ||
-              "https://atphdev.wordpress.com/wp-content/uploads/2025/10/logo-atph.png"
-            }
-            width={25}
-            height={25}
+            src={formatAuthor(author).avatar}
+            width={28}
+            height={28}
             alt={formatAuthor(author).name}
-            className="rounded-full hover:scale-105 transition"
-            quality={75}
-            fetchPriority="high"
-            priority
+            className="rounded-full"
           />
-          <span className="font-mulish font-bold">
+          <span className="font-mulish font-semibold">
             {formatAuthor(author).name}
           </span>
         </div>
+
         <span>•</span>
-        <span className="text-sm font-mulish font-bold">
-          📆{" "}
+
+        <span className="font-mulish">
           {new Date(date).toLocaleDateString("es-PE", {
             day: "2-digit",
-            month: "short",
+            month: "long",
             year: "numeric",
           })}
         </span>
-        <span className="hidden lg:block">•</span>
-        <span className="text-sm font-mulish font-bold">
-          ⏱ {timeReading} min de lectura
-        </span>
+
+        <span>•</span>
+
+        <span className="font-mulish">⏱ {timeReading} min lectura</span>
       </div>
 
       <Share slug={slug} isDesktop={false} />
 
-      {/* Image */}
-      <div className="mb-8">
+      <div className="relative mt-8 mb-10">
+        <div className="absolute -inset-3 bg-gradient-to-br from-[#8b0000]/10 to-[#cca21c]/10 rounded-3xl blur-lg" />
         <Image
-          src={
-            loading
-              ? "./assets/apth-logo2.png"
-              : image || "./assets/apth-logo2.png"
-          }
+          src={image ?? "/assets/apth-logo2.png"}
           alt={stripHtml(title)}
           width={1200}
           height={600}
-          className="rounded-xl"
+          className="relative rounded-2xl"
           priority
         />
       </div>

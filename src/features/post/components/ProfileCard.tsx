@@ -3,59 +3,38 @@
 import Image from "next/image";
 import Link from "next/link";
 
-export default function ProfileCard() {
+const ProfileCard = () => {
   return (
-    <div className="max-w-sm mx-auto rounded-t-2xl overflow-hidden shadow-lg bg-white lg:sticky lg:top-[95px]">
-      {/* Banner superior */}
-      <div className="h-28 bg-gradient-to-r from-black via-blue-900 to-red-900"></div>
+    <div className="rounded-2xl overflow-hidden border border-[#ffe0d0] bg-white shadow-sm lg:sticky lg:top-[100px]">
+      <div className="h-24 bg-gradient-to-r from-[#8b0000] to-[#cca21c]" />
 
-      {/* Imagen de perfil */}
-      <div className="flex justify-center -mt-14">
+      <div className="flex justify-center -mt-12">
         <Image
           src="https://atphdev.wordpress.com/wp-content/uploads/2025/10/logo-atph.png"
-          alt="Profile"
-          width={100}
-          height={100}
-          className="rounded-full border-[#3D7793] bg-white border-2 object-cover"
-          loading="lazy"
-          quality={75}
+          alt="A Tus Pies Humilde"
+          width={96}
+          height={96}
+          className="rounded-full border-4 border-white bg-white"
         />
       </div>
 
-      {/* Contenido */}
       <div className="p-6 text-center">
-        <h2 className="text-xl font-semibold">A Tus Pies Humilde - Huacho</h2>
-        <p className="text-sky-600 text-sm mb-3">
-          7,4 mil Me gusta • 11 mil seguidores
-        </p>
-        <p className="text-gray-600 text-sm mb-4">
-          Un portal de difusión de manifestaciones de costumbre, fe, amor y
-          devoción de nuestra provincia.
+        <h2 className="font-cinzel font-bold text-[#8b0000] text-lg mb-1">
+          A Tus Pies Humilde
+        </h2>
+
+        <p className="text-sm font-mulish text-[#666] mb-4">
+          Portal de fe, tradición y devoción.
         </p>
 
-        {/* Botón */}
-        <Link
-          href="https://www.facebook.com/ATusPiesHumilde/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <button className="m-auto flex items-center gap-1 bg-sky-700 text-white px-5 py-2 rounded-md hover:bg-sky-800 transition">
-            Síguenos en
-            <svg
-              width={15}
-              height={15}
-              viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg"
-              fill="#fff"
-            >
-              <path
-                fillRule="evenodd"
-                d="M15.174 5.32H17V2.14A24 24 0 0 0 14.34 2c-2.632 0-4.435 1.656-4.435 4.7v2.8H7v3.555h2.905V22h3.56v-8.945h2.789l.443-3.555h-3.231V7.05c0-1.027.276-1.73 1.708-1.73"
-              />
-            </svg>
+        <Link href="https://www.facebook.com/ATusPiesHumilde/" target="_blank">
+          <button className="bg-[#8b0000] text-white px-6 py-2 rounded-full text-sm hover:bg-[#6f0000] transition">
+            Síguenos
           </button>
         </Link>
       </div>
     </div>
   );
-}
+};
+
+export default ProfileCard;
