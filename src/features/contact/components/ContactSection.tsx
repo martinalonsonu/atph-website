@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
+import emailjs from "@emailjs/browser";
 import Wrapper from "@/features/shared/layout/wrapper";
 import { CONTACT_MODEL } from "@/utils/models";
 
@@ -53,16 +54,10 @@ const ContactSection = () => {
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
   ) => {
     const { name, value } = e.target;
-    setFormData((prev) => ({
-      ...prev,
-      [name]: value,
-    }));
-    // Limpiar error al escribir
+    setFormData((prev) => ({ ...prev, [name]: value }));
+
     if (errors[name]) {
-      setErrors((prev) => ({
-        ...prev,
-        [name]: "",
-      }));
+      setErrors((prev) => ({ ...prev, [name]: "" }));
     }
   };
 
@@ -75,13 +70,29 @@ const ContactSection = () => {
     setSubmitStatus("idle");
 
     try {
-      // Simular envío - aquí iría la lógica real
-      await new Promise((resolve) => setTimeout(resolve, 1500));
+      const serviceId = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID;
+      const templateId = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID;
+      const publicKey = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY;
 
-      console.log("Formulario enviado:", formData);
+      if (!serviceId || !templateId || !publicKey) {
+        throw new Error("Faltan variables de entorno de EmailJS");
+      }
+
+      await emailjs.send(
+        serviceId,
+        templateId,
+        {
+          name: formData.name,
+          email: formData.email,
+          phone: formData.phone,
+          subject: formData.subject,
+          message: formData.message,
+        },
+        publicKey,
+      );
+
       setSubmitStatus("success");
 
-      // Resetear el formulario
       setFormData({
         name: "",
         email: "",
@@ -90,11 +101,10 @@ const ContactSection = () => {
         message: "",
       });
 
-      // Limpiar el mensaje de éxito después de 5 segundos
       setTimeout(() => setSubmitStatus("idle"), 5000);
     } catch (error) {
-      setSubmitStatus("error");
       console.error("Error al enviar:", error);
+      setSubmitStatus("error");
     } finally {
       setIsSubmitting(false);
     }

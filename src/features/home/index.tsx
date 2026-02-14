@@ -5,6 +5,7 @@ import HeroSection from "./sections/HeroSection";
 import BlogSection from "./sections/BlogSection";
 import ServicesSection from "./sections/ServicesSection";
 import SocialsSection from "./sections/SocialsSection";
+import PresentSection from "../about/sections/PresentSection";
 
 export default function Home() {
   return (
@@ -16,6 +17,7 @@ export default function Home() {
         <ServicesSection />
         <BlogSection />
         <SocialsSection />
+        <PresentSection />
       </main>
       <Footer />
     </div>

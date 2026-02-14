@@ -28,7 +28,7 @@ const BlogSection = async () => {
         <div className="flex flex-col items-center lg:items-end lg:flex-row justify-center gap-6 sm:gap-8 mb-10 sm:mb-14">
           <div className="flex flex-col items-center">
             <p className="text-xs sm:text-sm md:text-base font-bold tracking-widest text-[#cca21c] uppercase mb-2 sm:mb-3 md:mb-4">
-              Historias y Inspiración
+              Historias e Inspiración
             </p>
             <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-6xl font-cinzel font-bold text-[#8b0000] mb-3 sm:mb-4 text-center lg:text-left">
               Últimas Publicaciones
