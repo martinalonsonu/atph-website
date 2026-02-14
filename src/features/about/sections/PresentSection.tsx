@@ -1,26 +1,63 @@
 import Wrapper from "@/features/shared/layout/wrapper";
+import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
 const PresentSection = () => {
   return (
-    <section className="w-full bg-gradient-to-b from-[#fefefe] to-[#fff8f5] py-12 md:py-16">
+    <section className="w-full py-8 md:py-16 border-t-2 border-b-2 border-[#d4af37] relative overflow-hidden">
+      {/* Background decorativo */}
+      <div className="absolute inset-0 bg-gradient-to-r from-white via-[#fffcf0] to-white opacity-100" />
+
+      {/* Orbes de color */}
+      <div className="absolute inset-0 opacity-15">
+        <div className="absolute top-0 right-0 w-96 h-96 bg-[#d4af37] rounded-full blur-3xl" />
+        <div className="absolute bottom-0 left-0 w-80 h-80 bg-black rounded-full blur-3xl" />
+      </div>
+
+      {/* Contenido */}
       <Wrapper>
-        <div className="max-w-3xl mx-auto text-center flex flex-col gap-5">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-cinzel font-bold text-[#8b0000]">
-            Nuestro compromiso hoy
-          </h2>
+        <Link href="/alma-blanca">
+          <div className="group cursor-pointer relative z-10">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-20 items-center">
+              {/* Logo */}
+              <div className="flex justify-center md:justify-end">
+                <div className="relative w-48 md:w-56 aspect-square overflow-hidden rounded-lg transition-transform duration-300 group-hover:scale-105 shadow-lg">
+                  <Image
+                    src="https://atphdev.wordpress.com/wp-content/uploads/2026/02/diseno-sin-titulo-3.png"
+                    alt="Alma Blanca - Bordaduría Religiosa"
+                    width={192}
+                    height={192}
+                    className="w-full h-full object-contain bg-gradient-to-br from-[#f5f5f5] to-[#e0e0e0] p-4"
+                  />
+                </div>
+              </div>
 
-          <p className="text-sm sm:text-base font-mulish text-[#555] leading-relaxed">
-            Seguimos creciendo, aprendiendo y perfeccionando cada detalle,
-            siempre con la misma intención: servir con respeto, calidad y
-            coherencia con los valores que nos inspiran.
-          </p>
-
-          <p className="text-sm sm:text-base font-mulish text-[#555] leading-relaxed">
-            A Tus Pies Humilde no es solo un portal, es una comunidad que cree
-            que la fe también puede comunicarse con belleza y responsabilidad.
-          </p>
-        </div>
+              {/* Contenido */}
+              <div className="flex flex-col gap-2 text-center md:text-left">
+                <p className="text-xs sm:text-sm font-bold tracking-widest text-[#d4af37] uppercase opacity-90">
+                  Proyecto Destacado
+                </p>
+                <h3 className="text-3xl md:text-4xl font-cinzel font-bold text-black">
+                  Alma Blanca
+                </h3>
+                <p className="text-base md:text-lg font-mulish text-[#d4af37] font-semibold">
+                  Bordaduría Religiosa de Alta Calidad
+                </p>
+                <p className="text-sm md:text-base font-mulish text-[#333] max-w-md mx-auto md:mx-0">
+                  Bordados hechos a mano con fe y dedicación. Arte religioso,
+                  emblemas y diseños personalizados que nacen del corazón. Hecho
+                  con amor, inspirado por lo divino.
+                </p>
+                <div className="flex justify-center md:justify-start mt-2">
+                  <span className="inline-block px-6 py-2 bg-[#d4af37] text-black rounded-lg font-mulish font-semibold group-hover:bg-black group-hover:text-[#d4af37] transition-all duration-300">
+                    Conocer más →
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </Link>
       </Wrapper>
     </section>
   );
