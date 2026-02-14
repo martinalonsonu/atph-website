@@ -25,7 +25,7 @@ export default function ContactSection() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-xl mx-auto">
             {/* WhatsApp */}
             <Link
-              href="https://wa.me/+34XXXXXXXXX"
+              href="https://wa.me/+51904829133"
               target="_blank"
               rel="noopener noreferrer"
               className="group flex items-center justify-center gap-3 px-6 py-4 bg-white/10 border-2 border-white rounded-lg hover:bg-[#25d366] hover:border-[#25d366] transition-all duration-300"
@@ -35,13 +35,13 @@ export default function ContactSection() {
                 <p className="text-xs font-mulish opacity-75 group-hover:opacity-100">
                   Escríbenos por
                 </p>
-                <p className="text-lg font-cinzel font-bold">WhatsApp</p>
+                <p className="text-lg font-work font-bold">WhatsApp</p>
               </div>
             </Link>
 
             {/* Facebook */}
             <Link
-              href="https://facebook.com/almaBlanca"
+              href="https://www.facebook.com/almablanca1118"
               target="_blank"
               rel="noopener noreferrer"
               className="group flex items-center justify-center gap-3 px-6 py-4 bg-white/10 border-2 border-white rounded-lg hover:bg-[#1877f2] hover:border-[#1877f2] transition-all duration-300"
@@ -51,7 +51,7 @@ export default function ContactSection() {
                 <p className="text-xs font-mulish opacity-75 group-hover:opacity-100">
                   Síguenos en
                 </p>
-                <p className="text-lg font-cinzel font-bold">Facebook</p>
+                <p className="text-lg font-work font-bold">Facebook</p>
               </div>
             </Link>
           </div>
