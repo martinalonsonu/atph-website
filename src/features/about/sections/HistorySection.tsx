@@ -1,4 +1,5 @@
 import Wrapper from "@/features/shared/layout/wrapper";
+import { historySectionLabels } from "@/utils/models";
 import Image from "next/image";
 import React from "react";
 
@@ -16,32 +17,21 @@ const HistorySection = () => {
               </div>
               <div className="flex-1 pt-1">
                 <p className="text-xs sm:text-sm font-bold tracking-widest text-[#cca21c] uppercase">
-                  Capítulo I
+                  {historySectionLabels.chapterTitle}
                 </p>
               </div>
             </div>
-
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-cinzel font-bold text-[#8b0000]">
-              ¿Cómo empezó todo?
+              {historySectionLabels.title}
             </h2>
-
             <p className="text-sm sm:text-base font-mulish text-[#555] leading-relaxed">
-              A Tus Pies Humilde surge como una iniciativa sencilla, casi
-              silenciosa, impulsada por el deseo de servir. Empezamos
-              acompañando celebraciones religiosas, registrando momentos de fe y
-              tradición que muchas veces no podían llegar a todos.
+              {historySectionLabels.firstParagraph}
             </p>
-
             <p className="text-sm sm:text-base font-mulish text-[#555] leading-relaxed">
-              Con el tiempo, entendimos que la tecnología no reemplaza la fe,
-              pero sí puede amplificarla. Así, poco a poco, este proyecto fue
-              creciendo, integrando personas con distintos dones, pero con un
-              mismo propósito.
+              {historySectionLabels.secondParagraph}
             </p>
-
             <p className="text-sm sm:text-base font-mulish text-[#555] leading-relaxed">
-              Hoy, A Tus Pies Humilde es un espacio donde la devoción, la
-              tradición y la comunicación digital caminan juntas.
+              {historySectionLabels.thirdParagraph}
             </p>
           </div>
 
@@ -50,8 +40,8 @@ const HistorySection = () => {
             <div className="absolute -inset-4 bg-gradient-to-br from-[#8b0000]/10 to-[#cca21c]/10 rounded-3xl blur-lg" />
             <div className="relative overflow-hidden rounded-2xl">
               <Image
-                src="https://atphdev.wordpress.com/wp-content/uploads/2026/01/whatsapp-image-2026-01-23-at-10.32.09-pm.jpeg"
-                alt="Historia A Tus Pies Humilde"
+                src={historySectionLabels.image}
+                alt={historySectionLabels.imageAlt}
                 width={600}
                 height={500}
                 className="w-full h-[420px] object-cover"

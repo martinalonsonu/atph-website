@@ -1,4 +1,5 @@
 import Wrapper from "@/features/shared/layout/wrapper";
+import { textDescription } from "@/utils/models";
 import React from "react";
 
 const EssenceSection = () => {
@@ -16,20 +17,7 @@ const EssenceSection = () => {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          {[
-            {
-              title: "Fe",
-              text: "Creemos que todo servicio auténtico nace de una fe viva y comprometida.",
-            },
-            {
-              title: "Servicio",
-              text: "Ponemos nuestros dones al servicio de Dios y de la comunidad, con humildad.",
-            },
-            {
-              title: "Tradición",
-              text: "Respetamos y valoramos la historia, la devoción y las expresiones culturales.",
-            },
-          ].map((item, i) => (
+          {textDescription.map((item, i) => (
             <div
               key={i}
               className="bg-white p-6 rounded-xl border border-[#ffe0d0] hover:shadow-lg transition-shadow"
