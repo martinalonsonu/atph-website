@@ -1,4 +1,5 @@
 import Wrapper from "@/features/shared/layout/wrapper";
+import { foundationLabels, imageATPH } from "@/utils/models";
 import Image from "next/image";
 import React from "react";
 
@@ -12,7 +13,7 @@ const FoundationSection = () => {
             <div className="absolute -inset-4 bg-gradient-to-br from-[#cca21c]/10 to-[#8b0000]/10 rounded-3xl blur-lg" />
             <div className="relative overflow-hidden rounded-2xl">
               <Image
-                src="https://atphdev.wordpress.com/wp-content/uploads/2026/01/whatsapp-image-2026-01-23-at-10.32.09-pm-1.jpeg"
+                src={imageATPH.group}
                 alt="Fundación A Tus Pies Humilde"
                 width={600}
                 height={500}
@@ -30,31 +31,21 @@ const FoundationSection = () => {
               </div>
               <div className="flex-1 pt-1">
                 <p className="text-xs sm:text-sm font-bold tracking-widest text-[#cca21c] uppercase">
-                  Capítulo II
+                  {foundationLabels.title}
                 </p>
               </div>
             </div>
-
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-cinzel font-bold text-[#8b0000]">
-              Un proyecto con propósito
+              {foundationLabels.description}
             </h2>
-
             <p className="text-sm sm:text-base font-mulish text-[#555] leading-relaxed">
-              A Tus Pies Humilde fue fundado con la intención de responder a una
-              necesidad concreta: acercar la fe y las tradiciones religiosas a
-              más personas, especialmente a quienes no podían vivirlas de manera
-              presencial.
+              {foundationLabels.firstText}
             </p>
-
             <p className="text-sm sm:text-base font-mulish text-[#555] leading-relaxed">
-              Desde sus primeros pasos, el proyecto se sostuvo sobre la entrega
-              voluntaria, el trabajo colaborativo y el compromiso de servir con
-              respeto, responsabilidad y humildad.
+              {foundationLabels.secondText}
             </p>
-
             <p className="text-sm sm:text-base font-mulish text-[#555] leading-relaxed">
-              La fundación de este portal marcó el inicio de un camino que hoy
-              sigue creciendo, siempre fiel a sus valores originales.
+              {foundationLabels.thirdText}
             </p>
           </div>
         </div>

@@ -1,3 +1,5 @@
+import { title } from "process";
+
 export const HEADER_NAV_INFORMATION = [
   { title: "Nosotros", link: "/nosotros" },
   { title: "Servicios", link: "/#services" },
@@ -165,3 +167,82 @@ export const TEAM_MEMBERS = [
     description: "",
   },
 ];
+
+export const textDescription = [
+  {
+    title: "Fe",
+    text: "Creemos que todo servicio auténtico nace de una fe viva y comprometida.",
+  },
+  {
+    title: "Servicio",
+    text: "Ponemos nuestros dones al servicio de Dios y de la comunidad, con humildad.",
+  },
+  {
+    title: "Tradición",
+    text: "Respetamos y valoramos la historia, la devoción y las expresiones culturales.",
+  },
+];
+
+export const imageATPH = {
+  group:
+    "https://atphdev.wordpress.com/wp-content/uploads/2026/01/whatsapp-image-2026-01-23-at-10.32.09-pm-1.jpeg",
+  angel:
+    "https://atphdev.wordpress.com/wp-content/uploads/2026/01/captura-de-pantalla-2026-01-23-224537.png",
+};
+
+export const foundationLabels = {
+  title: "Capítulo II",
+  description: "Un proyecto con propósito",
+  firstText:
+    "A Tus Pies Humilde fue fundado con la intención de responder a una necesidad concreta: acercar la fe y las tradiciones religiosas a más personas, especialmente a quienes no podían vivirlas de manera presencial.",
+  secondText:
+    "Desde sus primeros pasos, el proyecto se sostuvo sobre la entrega voluntaria, el trabajo colaborativo y el compromiso de servir con respeto, responsabilidad y humildad.",
+  thirdText:
+    "La fundación de este portal marcó el inicio de un camino que hoy sigue creciendo, siempre fiel a sus valores originales.",
+};
+
+export const founderMemorialLabels = {
+  title: "Memorial - Legado Eterno",
+  founder: "Ángel Joel Villanueva Reyes",
+  firstDescription: "Líder y principal impulsor de la existencia de",
+  foundationName: "A Tus Pies Humilde",
+  secondDescription: "cuya visión, fe y entrega dieron origen a este proyecto.",
+  devotionDescription: "De él heredamos a nuestro patrón y protector, el",
+  devotionImage: "Señor de Humildad y Paciencia",
+  devotionText:
+    ", de quien fue profundamente devoto y cuya espiritualidad marcó el rumbo de nuestra misión.",
+  dateDeath: "26 de noviembre de 2020",
+  legacyDescription:
+    "Partió a la Casa del Padre, dejando un legado de fe, humildad y servicio",
+  quote:
+    "Su obra continúa viva, guiada por los valores de humildad, servicio y perseverancia que él sembró.",
+};
+
+export const heroSectionLabels = {
+  tooltip: "Nuestra Historia",
+  title: "A Tus Pies ",
+  span: "Humilde",
+  description:
+    "Somos un proyecto que nace desde la fe, el servicio y la convicción de que la evangelización también puede vivirse con calidad, creatividad y compromiso en el mundo digital.",
+};
+
+export const historySectionLabels = {
+  chapterTitle: "Capítulo I",
+  title: "¿Cómo empezó todo?",
+  firstParagraph:
+    "A Tus Pies Humilde surge como una iniciativa sencilla, casi silenciosa, impulsada por el deseo de servir. Empezamos acompañando celebraciones religiosas, registrando momentos de fe y tradición que muchas veces no podían llegar a todos.",
+  secondParagraph:
+    "Con el tiempo, entendimos que la tecnología no reemplaza la fe, pero sí puede amplificarla. Así, poco a poco, este proyecto fue creciendo, integrando personas con distintos dones, pero con un mismo propósito.",
+  thirdParagraph:
+    "Hoy, A Tus Pies Humilde es un espacio donde la devoción, la tradición y la comunicación digital caminan juntas.",
+  image:
+    "https://atphdev.wordpress.com/wp-content/uploads/2026/01/whatsapp-image-2026-01-23-at-10.32.09-pm.jpeg",
+  imageAlt: "Historia A Tus Pies Humilde",
+};
+
+export const presentSectionLabels = {
+  tooltip: "Proyecto Destacado",
+  title: "Alma Blanca",
+  description: "Bordaduría Religiosa de Alta Calidad",
+  text: "Bordados hechos a mano con fe y dedicación. Arte religioso, emblemas y diseños personalizados que nacen del corazón. Hecho con amor, inspirado por lo divino.",
+};

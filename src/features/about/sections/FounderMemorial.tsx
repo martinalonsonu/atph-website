@@ -1,4 +1,5 @@
 import Wrapper from "@/features/shared/layout/wrapper";
+import { founderMemorialLabels, imageATPH } from "@/utils/models";
 import Image from "next/image";
 import React from "react";
 
@@ -16,45 +17,38 @@ const FounderMemorialSection = () => {
               </div>
               <div className="flex-1 pt-1">
                 <p className="text-xs sm:text-sm font-bold tracking-widest text-[#cca21c] uppercase">
-                  Memorial - Legado Eterno
+                  {founderMemorialLabels.title}
                 </p>
               </div>
             </div>
-
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-cinzel font-bold text-[#8b0000]">
-              Ángel Joel Villanueva Reyes
+              {founderMemorialLabels.founder}
             </h2>
-
             <p className="text-sm sm:text-base font-mulish text-[#555] leading-relaxed">
-              Líder y principal impulsor de la existencia de{" "}
+              {founderMemorialLabels.firstDescription}{" "}
               <span className="font-semibold text-[#8b0000]">
-                A Tus Pies Humilde
+                {founderMemorialLabels.foundationName}
               </span>
-              , cuya visión, fe y entrega dieron origen a este proyecto.
+              , {founderMemorialLabels.secondDescription}
             </p>
-
             <p className="text-sm sm:text-base font-mulish text-[#555] leading-relaxed">
-              De él heredamos a nuestro patrón y protector, el{" "}
+              {founderMemorialLabels.devotionDescription}{" "}
               <span className="font-semibold">
-                Señor de Humildad y Paciencia
+                {founderMemorialLabels.devotionImage}
               </span>
-              , de quien fue profundamente devoto y cuya espiritualidad marcó el
-              rumbo de nuestra misión.
+              , {founderMemorialLabels.devotionText}
             </p>
-
             <div className="bg-[#8b0000]/5 border-l-4 border-[#8b0000] pl-4 py-3 my-2 rounded-r">
               <p className="text-sm sm:text-base font-mulish text-[#8b0000] font-semibold">
-                26 de noviembre de 2020
+                {founderMemorialLabels.dateDeath}
               </p>
               <p className="text-xs sm:text-sm font-mulish text-[#555] mt-1">
-                Partió a la Casa del Padre, dejando un legado de fe, humildad y
-                servicio
+                {founderMemorialLabels.legacyDescription}
               </p>
             </div>
 
             <p className="text-sm sm:text-base font-mulish text-[#555] leading-relaxed italic">
-              &ldquo;Su obra continúa viva, guiada por los valores de humildad,
-              servicio y perseverancia que él sembró.&rdquo;
+              &ldquo;{founderMemorialLabels.quote}&rdquo;
             </p>
 
             {/* Línea simbólica */}
@@ -68,7 +62,7 @@ const FounderMemorialSection = () => {
             <div className="absolute -inset-4 bg-gradient-to-br from-[#8b0000]/20 to-[#cca21c]/10 rounded-3xl blur-lg" />
             <div className="relative overflow-hidden rounded-2xl shadow-lg">
               <Image
-                src="https://atphdev.wordpress.com/wp-content/uploads/2026/01/captura-de-pantalla-2026-01-23-224537.png"
+                src={imageATPH.angel}
                 alt="Ángel Joel Villanueva Reyes"
                 width={520}
                 height={620}

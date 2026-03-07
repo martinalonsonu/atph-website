@@ -1,4 +1,5 @@
 import Wrapper from "@/features/shared/layout/wrapper";
+import { presentSectionLabels } from "@/utils/models";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
@@ -36,18 +37,16 @@ const PresentSection = () => {
               {/* Contenido */}
               <div className="flex flex-col gap-2 text-center md:text-left">
                 <p className="text-xs sm:text-sm font-bold tracking-widest text-[#d4af37] uppercase opacity-90">
-                  Proyecto Destacado
+                  {presentSectionLabels.tooltip}
                 </p>
                 <h3 className="text-3xl md:text-4xl font-cinzel font-bold text-black">
-                  Alma Blanca
+                  {presentSectionLabels.title}
                 </h3>
                 <p className="text-base md:text-lg font-mulish text-[#d4af37] font-semibold">
-                  Bordaduría Religiosa de Alta Calidad
+                  {presentSectionLabels.description}
                 </p>
                 <p className="text-sm md:text-base font-mulish text-[#333] max-w-md mx-auto md:mx-0">
-                  Bordados hechos a mano con fe y dedicación. Arte religioso,
-                  emblemas y diseños personalizados que nacen del corazón. Hecho
-                  con amor, inspirado por lo divino.
+                  {presentSectionLabels.text}
                 </p>
                 <div className="flex justify-center md:justify-start mt-2">
                   <span className="inline-block px-6 py-2 bg-[#d4af37] text-black rounded-lg font-mulish font-semibold group-hover:bg-black group-hover:text-[#d4af37] transition-all duration-300">
