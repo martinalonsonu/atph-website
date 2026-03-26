@@ -3,9 +3,6 @@ import { formatAuthor, formatCategory } from "@/utils/helpers";
 import { Metadata } from "next";
 import { getPostBySlug, getAllPostSlugs } from "@/lib/actions";
 
-export const dynamicParams = true;
-export const dynamic = "force-dynamic";
-export const revalidate = 3600; // Opcional: cache ISR para `getPostBySlug` durante 1h
 
 export async function generateStaticParams() {
   const slugs = await getAllPostSlugs();
