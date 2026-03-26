@@ -8,6 +8,10 @@ export const metadata: Metadata = {
   title: "A Tus Pies Humilde | 404 No Encontrada",
   description:
     "Portal religioso católico y devocional | Transmisiones en vivo | Alfombras de Aserrín y Viruta teñida",
+  robots: {
+    index: false,
+    follow: false,
+  },
 };
 
 const NotFound = () => {

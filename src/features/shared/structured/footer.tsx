@@ -1,5 +1,6 @@
 import React from "react";
 import Wrapper from "../layout/wrapper";
+import Link from "next/link";
 
 const Footer = () => {
   return (
@@ -11,7 +12,14 @@ const Footer = () => {
             reservados.
           </p>
           <p className="font-mulish text-white text-[9px] mt-2">
-            Hecho con ❤️ por @martinalonsonu
+            Hecho con ❤️ por{" "}
+            <Link
+              href="https://martinalonsonu.netlify.app/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              @martinalonsonu
+            </Link>
           </p>
         </div>
       </Wrapper>
