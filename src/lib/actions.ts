@@ -2,18 +2,32 @@ import { Post } from "./interface";
 
 export const getAllPostSlugs = async (): Promise<string[]> => {
   const fields = "slug";
-  const url = `${process.env.API_BASE}/posts?per_page=100&_fields=${fields}`;
-  try {
-    const response = await fetch(url, {
-      next: { revalidate: 3600 },
-    });
-    if (!response.ok) throw new Error("Error al obtener slugs de posts");
-    const data: Post[] = await response.json();
-    return data.map((post) => post.slug);
-  } catch (error) {
-    console.error(error);
-    return [];
+  const perPage = 100;
+  const slugs: string[] = [];
+  let page = 1;
+
+  while (true) {
+    const url = `${process.env.API_BASE}/posts?per_page=${perPage}&page=${page}&_fields=${fields}`;
+    try {
+      const response = await fetch(url, {
+        next: { revalidate: 3600 },
+      });
+      if (!response.ok) throw new Error("Error al obtener slugs de posts");
+
+      const data: Post[] = await response.json();
+      if (data.length === 0) break;
+
+      slugs.push(...data.map((post) => post.slug));
+      if (data.length < perPage) break;
+
+      page += 1;
+    } catch (error) {
+      console.error(error);
+      break;
+    }
   }
+
+  return slugs;
 };
 
 export const getPosts = async (amountPosts: number): Promise<Post[]> => {
