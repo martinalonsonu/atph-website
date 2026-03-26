@@ -25,11 +25,14 @@ export async function generateMetadata({
     };
   }
 
+  const getFirstParagraph = (html?: string): string => {
+    if (!html) return "";
+    const match = html.match(/<p[^>]*>(.*?)<\/p>/i);
+    return match ? match[1].replace(/<[^>]*>/g, "").trim() : "";
+  };
+
   const cleanDescription =
-    post.excerpt?.rendered
-      ?.replace(/<[^>]*>/g, "")
-      ?.trim()
-      ?.substring(0, 160) || "";
+    getFirstParagraph(post.content?.rendered)?.substring(0, 160) || "";
 
   return {
     title: post.title?.rendered || "Post sin título",
