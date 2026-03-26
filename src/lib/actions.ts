@@ -34,10 +34,10 @@ export const getPosts = async (amountPosts: number): Promise<Post[]> => {
   const fields =
     "id,date,slug,title,author,jetpack_featured_media_url,categories,excerpt,tags";
   const amount = amountPosts || 5;
-  const url = `${process.env.API_BASE}/posts?per_page=${amount}&_fields=${fields}`;
+  const url = `${process.env.API_BASE}/posts?per_page=${amount}&orderby=date&order=desc&_fields=${fields}`;
   try {
     const response = await fetch(url, {
-      next: { revalidate: 3600 },
+      next: { revalidate: 300 },
     });
     if (!response.ok) throw new Error("Error al obtener posts");
     const data: Post[] = await response.json();
