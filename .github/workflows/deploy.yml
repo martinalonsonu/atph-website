@@ -74,10 +74,14 @@ jobs:
           grep -n "remake" out/index.html || true
           grep -n "FSSPX" out/index.html || true
 
-            - name: Upload artifact
-              uses: actions/upload-pages-artifact@v4
-              with:
-                path: ./out
+      - name: Show out structure
+        run: |
+          find out -maxdepth 3 -type f | sort
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: ./out
 
   deploy:
     environment:
