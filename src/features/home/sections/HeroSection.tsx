@@ -15,7 +15,7 @@ const HeroSection = () => {
         bg-gradient-to-br from-[#fff8f5] via-[#fffcf9] to-[#fff3ed]
         flex flex-col
         lg:grid lg:grid-cols-2
-        lg:min-h-[85vh]
+        md:h-dvh
       "
     >
       {/* Decorativos de fondo */}
@@ -97,17 +97,17 @@ const HeroSection = () => {
       <div
         className="
           relative
-          h-64 sm:h-80 md:h-[650px]
+          h-64 sm:h-80 md:h-full
           overflow-hidden
           order-1 lg:order-2
         "
       >
-        <div className="relative group">
+        <div className="relative group h-full">
           <Image
             src={HERO_INFORMATION[0].image}
             alt={HERO_INFORMATION[0].alt}
-            width={600}
-            height={800}
+            width={500}
+            height={700}
             priority
             quality={85}
             fetchPriority="high"
@@ -141,7 +141,7 @@ const HeroSection = () => {
           <div className="absolute inset-0 bg-gradient-to-r from-[#fff8f5] via-transparent to-transparent lg:from-[#fff8f5]/40" />
 
           {/* Badge */}
-          <div className="absolute bottom-6 left-6 right-6 bg-white/90 backdrop-blur-md rounded-xl p-4 shadow-lg">
+          <div className="absolute bottom-24 left-6 right-6 bg-white/90 backdrop-blur-md rounded-xl p-4 shadow-lg">
             <p className="text-sm font-semibold text-[#8b0000] font-cinzel tracking-wide">
               ✨ A Sus Pies
             </p>
