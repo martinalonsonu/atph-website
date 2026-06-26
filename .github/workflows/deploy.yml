@@ -64,10 +64,20 @@ jobs:
         run: |
           npm run build
 
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v4
-        with:
-          path: ./out
+      - name: Inspect exported HTML
+        run: |
+          echo "===== BLOG INDEX ====="
+          grep -n "remake" out/blog/index.html || true
+          grep -n "FSSPX" out/blog/index.html || true
+
+          echo "===== HOME ====="
+          grep -n "remake" out/index.html || true
+          grep -n "FSSPX" out/index.html || true
+
+            - name: Upload artifact
+              uses: actions/upload-pages-artifact@v4
+              with:
+                path: ./out
 
   deploy:
     environment:
