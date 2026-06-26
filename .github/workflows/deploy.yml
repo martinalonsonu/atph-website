@@ -67,7 +67,6 @@ jobs:
       - name: Build project
         run: |
           npm run build
-          npx next export
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v4
