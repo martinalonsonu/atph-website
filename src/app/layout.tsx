@@ -36,7 +36,6 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: "A Tus Pies Humilde" }],
   creator: "A Tus Pies Humilde",
-  themeColor: "#8B0000",
   robots: {
     index: true,
     follow: true,
