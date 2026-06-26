@@ -3,7 +3,6 @@ import { formatAuthor, formatCategory } from "@/utils/helpers";
 import { Metadata } from "next";
 import { getPostBySlug, getAllPostSlugs } from "@/lib/actions";
 
-
 export async function generateStaticParams() {
   const slugs = await getAllPostSlugs();
   return slugs.map((slug) => ({
@@ -35,9 +34,14 @@ export async function generateMetadata({
   const cleanDescription =
     getFirstParagraph(post.content?.rendered)?.substring(0, 160) || "";
 
+  const url = `https://www.atuspieshumilde.com/blog/${slug}`;
+
   return {
     title: post.title?.rendered || "Post sin título",
     description: cleanDescription,
+    alternates: {
+      canonical: url,
+    },
     keywords: ["atph", "huacho"],
     authors: [{ name: formatAuthor(post?.author).name || "Autor desconocido" }],
 
