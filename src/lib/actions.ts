@@ -9,9 +9,7 @@ export const getAllPostSlugs = async (): Promise<string[]> => {
   while (true) {
     const url = `${process.env.API_BASE}/posts?per_page=${perPage}&page=${page}&orderby=date&order=desc&_fields=${fields}`;
     try {
-      const response = await fetch(url, {
-        next: { revalidate: 300 },
-      });
+      const response = await fetch(url);
       if (!response.ok) throw new Error("Error al obtener slugs de posts");
 
       const data: Post[] = await response.json();
@@ -36,9 +34,7 @@ export const getPosts = async (amountPosts: number): Promise<Post[]> => {
   const amount = amountPosts || 5;
   const url = `${process.env.API_BASE}/posts?per_page=${amount}&orderby=date&order=desc&_fields=${fields}`;
   try {
-    const response = await fetch(url, {
-      next: { revalidate: 300 },
-    });
+    const response = await fetch(url);
     if (!response.ok) throw new Error("Error al obtener posts");
     const data: Post[] = await response.json();
     return data;
@@ -53,7 +49,7 @@ export const getPostBySlug = async (slug: string): Promise<Post> => {
     "id,date,slug,title,content,author,jetpack_featured_media_url,categories,tags";
   const url = `${process.env.API_BASE}/posts?slug=${slug}&_fields=${fields}`;
   try {
-    const response = await fetch(url, { next: { revalidate: 300 } });
+    const response = await fetch(url);
     if (!response.ok) throw new Error("Error al obtener el post");
     const data: Post[] = await response.json();
     return data[0];
