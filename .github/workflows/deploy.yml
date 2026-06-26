@@ -2,7 +2,7 @@ name: Deploy Next.js site to GitHub Pages
 
 on:
   push:
-    branches: ["main"]
+    branches: ["main", "develop"]
   workflow_dispatch:
 
 permissions:
@@ -61,7 +61,9 @@ jobs:
         run: npx next telemetry disable
 
       - name: Build project
-        run: npm run build
+        run: |
+          npm run build
+          npx next export -o out
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v4
