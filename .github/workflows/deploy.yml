@@ -33,7 +33,7 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: "24"
+          node-version: "20"
           cache: "npm"
 
       - name: Cache Next.js build
@@ -63,16 +63,6 @@ jobs:
       - name: Build project
         run: |
           npm run build
-
-      - name: Inspect exported HTML
-        run: |
-          echo "===== BLOG TXT ====="
-          grep -ni "historia" out/blog.txt || true
-          grep -ni "remake" out/blog.txt || true
-
-          echo "===== HOME TXT ====="
-          grep -ni "historia" out/index.txt || true
-          grep -ni "remake" out/index.txt || true
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v4
