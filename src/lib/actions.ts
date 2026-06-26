@@ -7,7 +7,7 @@ export const getAllPostSlugs = async (): Promise<string[]> => {
   let page = 1;
 
   while (true) {
-    const url = `${process.env.API_BASE}/posts?per_page=${perPage}&page=${page}&_fields=${fields}`;
+    const url = `${process.env.API_BASE}/posts?per_page=${perPage}&page=${page}&orderby=date&order=desc&_fields=${fields}`;
     try {
       const response = await fetch(url, {
         next: { revalidate: 3600 },
