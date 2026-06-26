@@ -57,17 +57,13 @@ jobs:
           echo "✅ EMAILJS_TEMPLATE_ID: $NEXT_PUBLIC_EMAILJS_TEMPLATE_ID"
           echo "✅ EMAILJS_PUBLIC_KEY: $NEXT_PUBLIC_EMAILJS_PUBLIC_KEY"
 
-      - name: "Debug: fetch latest post from API"
-        run: |
-          node -e "(async()=>{try{const r=await fetch(process.env.API_BASE + '/posts?per_page=1'); const d=await r.json(); console.log('LATEST_POST:', JSON.stringify(d[0]||{}));}catch(e){console.error('FETCH_ERROR',e); process.exit(1)}})()"
-
       - name: Disable Next.js telemetry
         run: npx next telemetry disable
 
       - name: Build project
         run: |
           npm run build
-
+          z
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v4
         with:
