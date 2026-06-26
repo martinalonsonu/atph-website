@@ -32,7 +32,7 @@ export const metadata: Metadata = {
     "católico",
     "devoción",
     "iglesia",
-    "Huacho"
+    "Huacho",
   ],
   authors: [{ name: "A Tus Pies Humilde" }],
   creator: "A Tus Pies Humilde",
@@ -64,15 +64,16 @@ export const metadata: Metadata = {
     title: "A Tus Pies Humilde | Portal Católico Devocional",
     description:
       "A Tus Pies Humilde: comunidad católica en Huacho, Perú. Alfombras de aserrín, viruta teñida, transmisiones en vivo y noticias religiosas.",
-    images: ["https://atphdev.wordpress.com/wp-content/uploads/2025/10/logo-atph.png"],
-  },
-  alternates: {
-    canonical: "https://www.atuspieshumilde.com/",
+    images: [
+      "https://atphdev.wordpress.com/wp-content/uploads/2025/10/logo-atph.png",
+    ],
   },
   icons: {
     icon: "https://atphdev.wordpress.com/wp-content/uploads/2025/10/logo-atph.png",
-    shortcut: "https://atphdev.wordpress.com/wp-content/uploads/2025/10/logo-atph.png",
-    apple: "https://atphdev.wordpress.com/wp-content/uploads/2025/10/logo-atph.png",
+    shortcut:
+      "https://atphdev.wordpress.com/wp-content/uploads/2025/10/logo-atph.png",
+    apple:
+      "https://atphdev.wordpress.com/wp-content/uploads/2025/10/logo-atph.png",
   },
 };
 
