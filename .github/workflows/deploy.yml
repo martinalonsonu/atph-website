@@ -66,17 +66,13 @@ jobs:
 
       - name: Inspect exported HTML
         run: |
-          echo "===== BLOG INDEX ====="
-          grep -n "remake" out/blog/index.html || true
-          grep -n "FSSPX" out/blog/index.html || true
+          echo "===== BLOG TXT ====="
+          grep -ni "historia" out/blog.txt || true
+          grep -ni "remake" out/blog.txt || true
 
-          echo "===== HOME ====="
-          grep -n "remake" out/index.html || true
-          grep -n "FSSPX" out/index.html || true
-
-      - name: Show out structure
-        run: |
-          find out -maxdepth 3 -type f | sort
+          echo "===== HOME TXT ====="
+          grep -ni "historia" out/index.txt || true
+          grep -ni "remake" out/index.txt || true
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v4
